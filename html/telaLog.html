@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/log.css">
+</head>
+<body>
+    
+    <div class="pagina">
+
+        <!-- PAINEL ESQUERDO -->
+        <aside class="painel-esquerdo">
+
+            <a href="avaliacao.html" class="voltar">
+                ← Voltar ao início
+            </a>
+
+            <div class="icone-logo">
+                ★
+            </div>
+
+            <h1>Área do Gestor</h1>
+
+            <p class="descricao">
+                Gerencie setores, perguntas e
+                acompanhe as avaliações dos seus
+                clientes de forma simples e organizada.
+            </p>
+
+            <div class="beneficios">
+
+                <div class="beneficio">
+                    <span>📊</span>
+                    <p>Análise de dados com gráficos interativos</p>
+                </div>
+
+                <div class="beneficio">
+                    <span>🏢</span>
+                    <p>Cadastre setores e personalize perguntas</p>
+                </div>
+
+                <div class="beneficio">
+                    <span>🔒</span>
+                    <p>Avaliações dos clientes protegidas</p>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ÁREA DIREITA -->
+        <main class="area-login">
+
+            <div class="login-container">
+
+                <h2>Entrar</h2>
+
+                <p class="subtitulo">
+                    Acesse o painel de gestão
+                </p>
+
+
+                <!-- ABAS -->
+                <div class="abas">
+
+                    <button
+                        type="button"
+                        class="aba ativa"
+                        id="abaEntrar">
+                        Entrar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="aba"
+                        id="abaCadastrar">
+                        Cadastrar
+                    </button>
+
+                </div>
+
+
+                <!-- FORMULÁRIO DE LOGIN -->
+                <form id="formLogin">
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="gestor@empresa.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="••••••••"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-login">
+                        Entrar no painel
+                    </button>
+
+                </form>
+
+
+                <p class="demonstracao">
+                    Conta de demonstração:
+                    <strong>gestor@empresa.com</strong>
+                    /
+                    <strong>123456</strong>
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="../js/log.js"></script>
+</body>
+</html>

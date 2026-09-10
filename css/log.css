@@ -1,0 +1,373 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f1f4fa;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================
+   PAINEL ESQUERDO
+========================= */
+
+.painel-esquerdo {
+    width: 21%;
+
+    min-width: 320px;
+
+    background-color: #223563;
+
+    color: white;
+
+    padding: 40px 36px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   VOLTAR
+========================= */
+
+.voltar {
+    color: #aebbd8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin-bottom: 48px;
+}
+
+.voltar:hover {
+    color: white;
+}
+
+
+/* =========================
+   ÍCONE
+========================= */
+
+.icone-logo {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5a914;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   TÍTULO DO PAINEL
+========================= */
+
+.painel-esquerdo h1 {
+    font-size: 29px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.descricao {
+    color: #aebbd8;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    max-width: 290px;
+}
+
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios {
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.beneficio {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+.beneficio span {
+    font-size: 17px;
+}
+
+.beneficio p {
+    color: #c0cbe0;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    max-width: 230px;
+}
+
+
+/* =========================
+   ÁREA DIREITA
+========================= */
+
+.area-login {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   CONTAINER DO LOGIN
+========================= */
+
+.login-container {
+    width: 100%;
+
+    max-width: 430px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.login-container h2 {
+    color: #223563;
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #91a0bd;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   ABAS
+========================= */
+
+.abas {
+    width: 100%;
+
+    height: 40px;
+
+    display: flex;
+
+    border: 1px solid #dce2ec;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 32px;
+
+    background-color: white;
+}
+
+.aba {
+    width: 50%;
+
+    border: none;
+
+    background-color: white;
+
+    color: #52627d;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.aba.ativa {
+    background-color: #223563;
+
+    color: white;
+}
+
+.aba:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    color: #304568;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 44px;
+
+    border: 1px solid #dce2ec;
+
+    border-radius: 10px;
+
+    background-color: transparent;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    color: #304568;
+
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #223563;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.botao-login {
+    width: 100%;
+
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #223563;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #17294d;
+}
+
+
+/* =========================
+   DEMONSTRAÇÃO
+========================= */
+
+.demonstracao {
+    text-align: center;
+
+    margin-top: 28px;
+
+    color: #9aa9c3;
+
+    font-size: 12px;
+}
+
+.demonstracao strong {
+    color: #38527e;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .pagina {
+        flex-direction: column;
+    }
+
+    .painel-esquerdo {
+        width: 100%;
+
+        min-width: auto;
+
+        padding: 30px;
+    }
+
+    .beneficios {
+        margin-top: 35px;
+    }
+
+    .area-login {
+        padding: 35px 25px;
+    }
+}
