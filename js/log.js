@@ -1,31 +1,29 @@
 const formLogin = document.getElementById("formLogin");
-
+if (formLogin != null) {
 formLogin.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
+
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
+ 
 
+  if (email === "" || senha === "") {
 
-    // LOGIN DE DEMONSTRAÇÃO
-    if (
-        email === "gestor@empresa.com" &&
-        senha === "123456"
-    ) {
+            alert("Preencha todos os campos.");
+
+            return;
+        }
 
         alert("Login realizado com sucesso!");
 
-        // Futuramente levará para o dashboard
-        window.location.href = "dashboard.html";
+        window.location.href = "visaoGeral.html";
 
-    } else {
+    });
 
-        alert("E-mail ou senha incorretos.");
+}
 
-    }
-
-});
 
 
 // BOTÃO ENTRAR
@@ -45,6 +43,6 @@ document.getElementById("abaCadastrar").addEventListener("click", function () {
 
     document.getElementById("abaEntrar").classList.remove("ativa");
 
-    alert("A tela de cadastro será implementada.");
+     window.location.href = "telaCad.html";
 
 });
