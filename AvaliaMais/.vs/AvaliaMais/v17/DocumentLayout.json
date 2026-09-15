@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\avaliamais.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\avaliamais.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Models\\Usuario.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Usuario.cs",
+              "RelativeToolTip": "AvaliaMais\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T13:46:36.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AvaliaMaisContext.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "RelativeToolTip": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T13:35:23.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T13:34:27.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Program.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Program.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Program.cs",
+              "RelativeToolTip": "AvaliaMais\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T13:07:14.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AvaliaMais",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
+              "RelativeDocumentMoniker": "AvaliaMais\\AvaliaMais.csproj",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
+              "RelativeToolTip": "AvaliaMais\\AvaliaMais.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-15T13:08:41.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
