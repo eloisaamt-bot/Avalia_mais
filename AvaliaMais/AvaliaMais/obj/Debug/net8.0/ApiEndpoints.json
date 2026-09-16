@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "AvaliaMais.Controllers.UsuarioController",
+    "Method": "ListarUsuarios",
+    "RelativePath": "Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.UsuarioController",
+    "Method": "CadastraUsuario",
+    "RelativePath": "Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "AvaliaMais.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "Usuario/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "AvaliaMais.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.UsuarioController",
+    "Method": "Logout",
+    "RelativePath": "Usuario/logout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

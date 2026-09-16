@@ -1,182 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="../css/cad.css">
 </head>
+
 <body>
-    
+
     <body>
 
-    <div class="pagina">
-
-      
-        <aside class="painel-esquerdo">
-
-            <a href="telaLog.html" class="voltar">
-                ← Voltar para o login
-            </a>
-
-            <img
-                src="../img/logo branca.png"
-                class="logo"
-                alt="Logo Avalia+"
-            >
-
-            <h1>Área do Gestor</h1>
-
-            <p class="descricao">
-                Crie sua conta para acessar o painel
-                de gestão e acompanhar as avaliações
-                dos seus clientes.
-            </p>
-
-            <div class="beneficios">
-
-                <div class="beneficio">
-                    <p>Visualize os resultados das avaliações</p>
-                </div>
-
-                <div class="beneficio">
-                    <p>Cadastre setores e suas perguntas</p>
-                </div>
-
-                <div class="beneficio">
-                    <p>Acompanhe a satisfação dos clientes</p>
-                </div>
-
-            </div>
-
-        </aside>
+        <div class="pagina">
 
 
-        <!-- ÁREA DIREITA -->
-        <main class="area-cadastro">
+            <aside class="painel-esquerdo">
 
-            <div class="cadastro-container">
+                <a href="telaLog.html" class="voltar">
+                    ← Voltar para o login
+                </a>
 
-                <h2>Criar conta</h2>
+                <img src="../img/logo branca.png" class="logo" alt="Logo Avalia+">
 
-                <p class="subtitulo">
-                    Cadastre-se para acessar o painel de gestão
+                <h1>Área do Gestor</h1>
+
+                <p class="descricao">
+                    Crie sua conta para acessar o painel
+                    de gestão e acompanhar as avaliações
+                    dos seus clientes.
                 </p>
 
-         <!-- ABAS -->
-                <div class="abas">
+                <div class="beneficios">
 
-                    <button
-                        type="button"
-                        class="aba "
-                        id="abaEntrar">
-                        Login
-                    </button>
+                    <div class="beneficio">
+                        <p>Visualize os resultados das avaliações</p>
+                    </div>
 
-                    <button
-                        type="button"
-                        class="aba ativa"
-                        id="abaCadastrar">
-                        Cadastrar
-                    </button>
+                    <div class="beneficio">
+                        <p>Cadastre setores e suas perguntas</p>
+                    </div>
+
+                    <div class="beneficio">
+                        <p>Acompanhe a satisfação dos clientes</p>
+                    </div>
 
                 </div>
 
-                <!-- FORMULÁRIO -->
-                <form id="formCadastro">
-
-                    <!-- NOME -->
-                    <div class="campo">
-
-                        <label for="nome">
-                            Nome
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nome"
-                            placeholder="Digite seu nome"
-                            required>
-
-                    </div>
+            </aside>
 
 
-                    <!-- E-MAIL -->
-                    <div class="campo">
+            <!-- ÁREA DIREITA -->
+            <main class="area-cadastro">
 
-                        <label for="email">
-                            E-mail
-                        </label>
+                <div class="cadastro-container">
 
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Digite seu e-mail"
-                            required>
+                    <h2>Criar conta</h2>
+
+                    <p class="subtitulo">
+                        Cadastre-se para acessar o painel de gestão
+                    </p>
+
+                    <!-- ABAS -->
+                    <div class="abas">
+
+                        <button type="button" class="aba " id="abaEntrar">
+                            Login
+                        </button>
+
+                        <button type="button" class="aba ativa" id="abaCadastrar">
+                            Cadastrar
+                        </button>
 
                     </div>
 
+                    <!-- FORMULÁRIO -->
+                    <form id="formCadastro">
 
-                    <!-- SENHA -->
-                    <div class="campo">
+                        <!-- NOME -->
+                        <div class="campo">
 
-                        <label for="senha">
-                            Senha
-                        </label>
+                            <label for="nome">
+                                Nome
+                            </label>
 
-                        <input
-                            type="password"
-                            id="senha"
-                            placeholder="Digite sua senha"
-                            required>
+                            <input type="text" id="nome" placeholder="Digite seu nome" required>
 
-                    </div>
+                        </div>
 
 
-                    <!-- CONFIRMAR SENHA -->
-                    <div class="campo">
+                        <!-- E-MAIL -->
+                        <div class="campo">
 
-                        <label for="confirmarSenha">
-                            Confirmar senha
-                        </label>
+                            <label for="email">
+                                E-mail
+                            </label>
 
-                        <input
-                            type="password"
-                            id="confirmarSenha"
-                            placeholder="Digite a senha novamente"
-                            required>
+                            <input type="email" id="email" placeholder="Digite seu e-mail" required>
 
-                    </div>
+                        </div>
 
 
-                    <!-- BOTÃO -->
-                    <button
-                        type="submit"
-                        class="botao-cadastro">
-                        Criar conta
-                    </button>
+                        <!-- SENHA -->
+                        <div class="campo">
 
-                </form>
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+                        </div>
 
 
-                <!-- VOLTAR PARA LOGIN -->
-                <p class="login-link">
+                        <!-- CONFIRMAR SENHA -->
+                        <div class="campo">
 
-                    Já possui uma conta?
+                            <label for="confirmarSenha">
+                                Confirmar senha
+                            </label>
 
-                  <a href="../html/telaLog.html">
+                            <input type="password" id="confirmarSenha" placeholder="Digite a senha novamente" required>
 
-                        Entrar
-                    </a>
+                        </div>
 
-                </p>
 
-            </div>
+                        <!-- BOTÃO -->
+                        <button type="submit" class="botao-cadastro">
+                            Criar conta
+                        </button>
 
-        </main>
+                    </form>
 
-    </div>
 
-     <script src="../js/cad.js"></script>
-</body>
+                    <!-- VOLTAR PARA LOGIN -->
+                    <p class="login-link">
+
+                        Já possui uma conta?
+
+                        <a href="../html/telaLog.html">
+
+                            Entrar
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </main>
+
+        </div>
+
+        <script src="../js/cad.js"></script>
+    </body>
+
 </html>

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="NovaPasta\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
