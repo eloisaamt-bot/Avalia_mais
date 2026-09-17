@@ -24,7 +24,7 @@ namespace AvaliaMais.Controllers
                     Nome = u.Nome
                 })
                 .ToList();
-
+                             
             return Ok(usuarios);
         }
         [HttpPost("login")]
@@ -37,8 +37,9 @@ namespace AvaliaMais.Controllers
             {
                 return Unauthorized("Email ou senha incorretos!");
             }
-            return Ok(usuarioBanco);
-           
+            return Ok("Logado com sucesso");
+            //return Ok(usuarioBanco);
+
         }
 
         [HttpGet("logout")]
@@ -53,9 +54,14 @@ namespace AvaliaMais.Controllers
         [HttpPost]
         public IActionResult CadastraUsuario(Usuario usuario)
         {
+            if (string.IsNullOrWhiteSpace(usuario.Nome))
+            {
+                return BadRequest("O nome é obrigatório.");
+            }
             _context.Add(usuario);
             _context.SaveChanges();
-            return Created("", usuario);
+            return Ok("Cadastrado com sucesso");
+           // return Created("", usuario);
         }
 
 
