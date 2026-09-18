@@ -37,8 +37,8 @@ namespace AvaliaMais.Controllers
             {
                 return Unauthorized("Email ou senha incorretos!");
             }
-            return Ok("Logado com sucesso");
-            //return Ok(usuarioBanco);
+            
+            return Ok(usuarioBanco);
 
         }
 

@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -33,6 +29,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\avaliamais.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\avaliamais.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SetorController.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\SetorController.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\SetorController.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\SetorController.cs",
-              "RelativeToolTip": "AvaliaMais\\Controllers\\SetorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\SetorController.cs*",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\SetorController.cs*",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAIwGEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-17T11:35:59.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Usuario.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Models\\Usuario.cs",
@@ -72,7 +72,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T11:00:18.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Setor.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Setor.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Models\\Setor.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Setor.cs*",
+              "RelativeToolTip": "AvaliaMais\\Models\\Setor.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T11:46:10.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AvaliaMaisContext.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs*",
+              "RelativeToolTip": "AvaliaMais\\Data\\AvaliaMaisContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T13:35:23.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "AvaliaMais",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
+              "RelativeDocumentMoniker": "AvaliaMais\\AvaliaMais.csproj",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
+              "RelativeToolTip": "AvaliaMais\\AvaliaMais.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-16T11:33:12.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AvaliaMais\\Properties\\launchSettings.json",
@@ -80,61 +131,12 @@
               "RelativeToolTip": "AvaliaMais\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-16T11:33:15.618Z"
+              "WhenOpened": "2026-09-16T11:33:15.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AvaliaMais",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
-              "RelativeDocumentMoniker": "AvaliaMais\\AvaliaMais.csproj",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\AvaliaMais.csproj",
-              "RelativeToolTip": "AvaliaMais\\AvaliaMais.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-16T11:33:12.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\UsuarioController.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs*",
-              "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T11:00:18.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Setor.cs",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Setor.cs",
-              "RelativeDocumentMoniker": "AvaliaMais\\Models\\Setor.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Setor.cs",
-              "RelativeToolTip": "AvaliaMais\\Models\\Setor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T11:46:10.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AvaliaMaisContext.cs",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
-              "RelativeDocumentMoniker": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
-              "RelativeToolTip": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T13:35:23.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\appsettings.json",
               "RelativeDocumentMoniker": "AvaliaMais\\appsettings.json",
