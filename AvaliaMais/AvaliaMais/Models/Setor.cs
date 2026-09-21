@@ -8,6 +8,7 @@ namespace AvaliaMais.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Pergunta { get; set; }
+        public bool Ativo {  get; set; }
         public int Fk_Usuarios_Id { get; set; }
     }
 }

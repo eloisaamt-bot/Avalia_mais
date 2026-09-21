@@ -1,358 +1,532 @@
-const setores = [
+const API_URL = "https://localhost:7254/Setor";
 
-    {
-        id: 1,
-        nome: "Atendimento",
-        descricao: "Qualidade do atendimento ao cliente",
-        icone: "👋",
-        avaliacoes: 12,
-        media: 3.7
-    },
+let setores = [];
 
-    {
-        id: 2,
-        nome: "Limpeza",
-        descricao: "Limpeza e higiene das instalações",
-        icone: "✨",
-        avaliacoes: 12,
-        media: 4.3
-    },
-
-    {
-        id: 3,
-        nome: "Produtos",
-        descricao: "Qualidade e variedade dos produtos",
-        icone: "📦",
-        avaliacoes: 12,
-        media: 3.7
-    },
-
-    {
-        id: 4,
-        nome: "Agilidade",
-        descricao: "Velocidade e eficiência no atendimento",
-        icone: "⚡",
-        avaliacoes: 12,
-        media: 3.7
-    }
-
-];
+let idSetorEditando = null;
 
 
-// =========================
+// ======================================================
+// LISTAR SETORES
+// ======================================================
+
+function listarSetores() {
+
+    fetch(API_URL, {
+
+        method: "GET",
+
+        credentials: "include"
+
+    })
+
+    .then(response => {
+
+        if (!response.ok) {
+
+            if (response.status === 401) {
+                throw new Error("Não autorizado");
+            }
+
+            throw new Error("Erro ao buscar setores");
+        }
+
+        return response.json();
+
+    })
+
+    .then(data => {
+
+        console.log("Setores recebidos:", data);
+
+        setores = data;
+
+        mostrarSetores();
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        if (error.message === "Não autorizado") {
+
+            alert("Faça o login antes de acessar os setores.");
+
+            window.location.href = "login.html";
+
+        } else {
+
+            alert("Não foi possível carregar os setores.");
+
+        }
+
+    });
+}
+
+
+// ======================================================
 // MOSTRAR SETORES
-// =========================
+// ======================================================
 
 function mostrarSetores() {
 
     const lista = document.getElementById("listaSetores");
 
+    if (lista == null) {
+        return;
+    }
+
     lista.innerHTML = "";
 
-    setores.forEach(function (setor) {
+
+    if (setores.length === 0) {
+
+        lista.innerHTML = `
+            <p>Nenhum setor cadastrado.</p>
+        `;
+
+        return;
+    }
+
+
+    setores.forEach(setor => {
 
         const card = document.createElement("div");
 
         card.classList.add("card-setor");
 
+
         card.innerHTML = `
 
-            <div class="card-topo">
+            <div class="icone-setor">
+                🏢
+            </div>
 
-                <div class="icone-setor">
-                    ${setor.icone}
-                </div>
+            <div class="informacoes-setor">
 
-                <div class="info-setor">
+                <h3>${setor.nome}</h3>
 
-                    <h3>
-                        ${setor.nome}
-                    </h3>
-
-                    <p>
-                        ${setor.descricao}
-                    </p>
-
-                </div>
+                <p>${setor.pergunta}</p>
 
             </div>
 
-
-            <div class="estatisticas">
-
-                <div class="estatistica">
-
-                    <strong>1</strong>
-
-                    <span>
-                        pergunta
-                    </span>
-
-                </div>
-
-
-                <div class="estatistica">
-
-                    <strong>
-                        ${setor.avaliacoes}
-                    </strong>
-
-                    <span>
-                        avaliações
-                    </span>
-
-                </div>
-
-
-                <div class="estatistica media">
-
-                    <strong>
-                        ${setor.media.toFixed(1)}
-                    </strong>
-
-                    <span>
-                        média
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="acoes">
+            <div class="acoes-setor">
 
                 <button
-                    class="acao"
-                    onclick="verPergunta(${setor.id})">
-                    📝 Pergunta
-                </button>
-
-                <button
-                    class="acao"
-                    onclick="verAnalise(${setor.id})">
-                    📊 Análise
-                </button>
-
-                <button
-                    class="icone-acao editar"
+                    type="button"
                     onclick="editarSetor(${setor.id})">
-                    ✏️
+                    Editar
                 </button>
 
                 <button
-                    class="icone-acao excluir"
+                    type="button"
                     onclick="excluirSetor(${setor.id})">
-                    🗑️
+                    Desativar
                 </button>
 
             </div>
 
         `;
 
+
         lista.appendChild(card);
 
     });
-
-
-    document.getElementById("quantidadeSetores").textContent =
-        `${setores.length} setores cadastrados`;
-
 }
 
 
-// =========================
-// MODAL
-// =========================
+// ======================================================
+// ABRIR MODAL PARA NOVO SETOR
+// ======================================================
 
 function abrirModal() {
 
-    document
-        .getElementById("modal")
-        .classList.add("aberto");
+    idSetorEditando = null;
+
+
+    const nome = document.getElementById("nomeSetor");
+
+    const pergunta = document.getElementById("perguntaSetor");
+
+    const titulo = document.getElementById("tituloModal");
+
+    const modal = document.getElementById("modalSetor");
+
+
+    if (nome != null) {
+        nome.value = "";
+    }
+
+    if (pergunta != null) {
+        pergunta.value = "";
+    }
+
+    if (titulo != null) {
+        titulo.textContent = "Novo Setor";
+    }
+
+    if (modal != null) {
+        modal.style.display = "flex";
+    }
 
 }
 
+
+// ======================================================
+// FECHAR MODAL
+// ======================================================
 
 function fecharModal() {
 
-    document
-        .getElementById("modal")
-        .classList.remove("aberto");
+    const modal = document.getElementById("modalSetor");
 
-    document
-        .getElementById("formSetor")
-        .reset();
+    if (modal != null) {
+        modal.style.display = "none";
+    }
 
 }
 
 
-// =========================
+// ======================================================
 // CADASTRAR SETOR
-// =========================
+// ======================================================
 
-document
-    .getElementById("formSetor")
-    .addEventListener("submit", function (event) {
+function cadastrarSetor() {
 
-        event.preventDefault();
+    const nome = document.getElementById("nomeSetor").value.trim();
 
-        const nome =
-            document.getElementById("nomeSetor").value.trim();
-
-        const pergunta =
-            document.getElementById("perguntaSetor").value.trim();
+    const pergunta = document.getElementById("perguntaSetor").value.trim();
 
 
-        if (nome === "" || pergunta === "") {
+    if (nome === "" || pergunta === "") {
 
-            alert("Preencha todos os campos.");
+        alert("Preencha todos os campos.");
 
-            return;
-        }
+        return;
+    }
 
 
-        const novoSetor = {
+    fetch(API_URL, {
 
-            id: Date.now(),
+        method: "POST",
+
+        credentials: "include",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify({
 
             nome: nome,
 
-            descricao: pergunta,
+            pergunta: pergunta
 
-            icone: "🏢",
+        })
 
-            avaliacoes: 0,
+    })
 
-            media: 0
+    .then(response => {
 
-        };
+        if (!response.ok) {
 
+            return response.text().then(mensagem => {
 
-        setores.push(novoSetor);
+                throw new Error(mensagem);
 
-        mostrarSetores();
+            });
 
-        fecharModal();
+        }
+
+        return response.json();
+
+    })
+
+    .then(data => {
+
+        console.log("Setor cadastrado:", data);
 
         alert("Setor cadastrado com sucesso!");
 
+        fecharModal();
+
+        listarSetores();
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        alert(
+            error.message ||
+            "Não foi possível cadastrar o setor."
+        );
+
     });
 
-
-// =========================
-// PERGUNTA
-// =========================
-
-function verPergunta(id) {
-
-    const setor =
-        setores.find(s => s.id === id);
-
-    if (!setor) return;
-
-    alert(
-        "Pergunta do setor " +
-        setor.nome +
-        ":\n\n" +
-        setor.descricao
-    );
-
 }
 
 
-// =========================
-// ANÁLISE
-// =========================
-
-function verAnalise(id) {
-
-    const setor =
-        setores.find(s => s.id === id);
-
-    if (!setor) return;
-
-    alert(
-        "Análise do setor: " +
-        setor.nome +
-        "\n\n" +
-        "Avaliações: " +
-        setor.avaliacoes +
-        "\n" +
-        "Média: " +
-        setor.media.toFixed(1)
-    );
-
-}
-
-
-// =========================
-// EDITAR
-// =========================
+// ======================================================
+// EDITAR SETOR
+// ======================================================
 
 function editarSetor(id) {
 
-    const setor =
-        setores.find(s => s.id === id);
-
-    if (!setor) return;
-
-    alert(
-        "A edição do setor será implementada depois."
-    );
-
-}
+    const setor = setores.find(s => s.id === id);
 
 
-// =========================
-// EXCLUIR
-// =========================
+    if (setor == null) {
 
-function excluirSetor(id) {
+        alert("Setor não encontrado.");
 
-    const indice =
-        setores.findIndex(s => s.id === id);
-
-    if (indice === -1) return;
+        return;
+    }
 
 
-    const confirmar =
-        confirm(
-            "Deseja realmente excluir o setor " +
-            setores[indice].nome +
-            "?"
-        );
+    idSetorEditando = id;
 
 
-    if (!confirmar) return;
+    document.getElementById("nomeSetor").value = setor.nome;
+
+    document.getElementById("perguntaSetor").value = setor.pergunta;
 
 
-    setores.splice(indice, 1);
+    const titulo = document.getElementById("tituloModal");
 
-    mostrarSetores();
+    if (titulo != null) {
 
-}
+        titulo.textContent = "Editar Setor";
+
+    }
 
 
-// =========================
-// SAIR
-// =========================
+    const modal = document.getElementById("modalSetor");
 
-function sair() {
+    if (modal != null) {
 
-    const confirmar =
-        confirm("Deseja sair do sistema?");
-
-    if (confirmar) {
-
-        window.location.href = "telaLog.html";
+        modal.style.display = "flex";
 
     }
 
 }
 
 
-// =========================
-// INICIAR
-// =========================
+// ======================================================
+// ATUALIZAR SETOR
+// ======================================================
 
-mostrarSetores();
+function atualizarSetor() {
+
+    const id = idSetorEditando;
+
+    const nome = document.getElementById("nomeSetor").value.trim();
+
+    const pergunta = document.getElementById("perguntaSetor").value.trim();
+
+
+    if (id == null) {
+
+        alert("Setor não selecionado.");
+
+        return;
+    }
+
+
+    if (nome === "" || pergunta === "") {
+
+        alert("Preencha todos os campos.");
+
+        return;
+    }
+
+
+    fetch(`${API_URL}/${id}`, {
+
+        method: "PUT",
+
+        credentials: "include",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify({
+
+            nome: nome,
+
+            pergunta: pergunta
+
+        })
+
+    })
+
+    .then(response => {
+
+        if (!response.ok) {
+
+            return response.text().then(mensagem => {
+
+                throw new Error(mensagem);
+
+            });
+
+        }
+
+        return response.text();
+
+    })
+
+    .then(data => {
+
+        console.log("Setor atualizado:", data);
+
+        alert("Setor atualizado com sucesso!");
+
+        fecharModal();
+
+        listarSetores();
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        alert(
+            error.message ||
+            "Não foi possível atualizar o setor."
+        );
+
+    });
+
+}
+
+
+// ======================================================
+// DESATIVAR SETOR
+// ======================================================
+
+function excluirSetor(id) {
+
+    const setor = setores.find(s => s.id === id);
+
+
+    if (setor == null) {
+
+        alert("Setor não encontrado.");
+
+        return;
+    }
+
+
+    const confirmar = confirm(
+        `Deseja desativar o setor "${setor.nome}"?`
+    );
+
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+
+    fetch(`${API_URL}/${id}`, {
+
+        method: "DELETE",
+
+        credentials: "include"
+
+    })
+
+    .then(response => {
+
+        if (!response.ok) {
+
+            return response.text().then(mensagem => {
+
+                throw new Error(mensagem);
+
+            });
+
+        }
+
+        return response.text();
+
+    })
+
+    .then(data => {
+
+        console.log("Setor desativado:", data);
+
+        alert("Setor desativado com sucesso!");
+
+        listarSetores();
+
+    })
+
+    .catch(error => {
+
+        console.log(error);
+
+        alert(
+            error.message ||
+            "Não foi possível desativar o setor."
+        );
+
+    });
+
+}
+
+
+// ======================================================
+// FORMULÁRIO DO SETOR
+// ======================================================
+
+const formSetor = document.getElementById("formSetor");
+
+
+if (formSetor != null) {
+
+    formSetor.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        if (idSetorEditando == null) {
+
+            cadastrarSetor();
+
+        } else {
+
+            atualizarSetor();
+
+        }
+
+    });
+
+}
+
+
+// ======================================================
+// BOTÃO SAIR
+// ======================================================
+
+function sair() {
+
+    window.location.href = "login.html";
+
+}
+
+
+// ======================================================
+// CARREGAR SETORES QUANDO ABRIR A PÁGINA
+// ======================================================
+
+listarSetores();

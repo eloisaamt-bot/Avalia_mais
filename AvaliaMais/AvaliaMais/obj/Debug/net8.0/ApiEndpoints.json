@@ -1,5 +1,68 @@
 [
   {
+    "ContainingType": "AvaliaMais.Controllers.SetorController",
+    "Method": "ListarSetores",
+    "RelativePath": "Setor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.SetorController",
+    "Method": "CadastrarSetor",
+    "RelativePath": "Setor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setor",
+        "Type": "AvaliaMais.Models.Setor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.SetorController",
+    "Method": "EditarSetor",
+    "RelativePath": "Setor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "setor",
+        "Type": "AvaliaMais.Models.Setor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.SetorController",
+    "Method": "DeletarSetor",
+    "RelativePath": "Setor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AvaliaMais.Controllers.UsuarioController",
     "Method": "ListarUsuarios",
     "RelativePath": "Usuario",

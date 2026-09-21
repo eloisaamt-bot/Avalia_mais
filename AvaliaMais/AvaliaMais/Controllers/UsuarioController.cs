@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using AvaliaMais.Data;
+﻿using AvaliaMais.Data;
 using AvaliaMais.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 namespace AvaliaMais.Controllers
 {
@@ -30,18 +31,23 @@ namespace AvaliaMais.Controllers
         [HttpPost("login")]
         public IActionResult Login(Usuario usuario)
         {
-            var usuarioBanco = _context.Usuarios.Where
-                (u => u.Email.Equals(usuario.Email) &&
-                u.Senha.Equals(usuario.Senha)).ToList();
+            var usuarioBanco = _context.Usuarios
+                .Where(u => u.Email == usuario.Email &&
+                            u.Senha == usuario.Senha)
+                .ToList();
+
             if (usuarioBanco.Count == 0)
             {
                 return Unauthorized("Email ou senha incorretos!");
             }
-            
-            return Ok(usuarioBanco);
 
+            HttpContext.Session.SetString(
+                "IdLogado",
+                usuarioBanco[0].Id.ToString()
+            );
+
+            return Ok(usuarioBanco[0]);
         }
-
         [HttpGet("logout")]
         public IActionResult Logout()
         {

@@ -1,193 +1,382 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setor</title>
+
+    <title>Setores</title>
+
     <link rel="stylesheet" href="../css/setor.css">
+
 </head>
+
+
 <body>
+
     <div class="pagina">
 
-        <!-- MENU LATERAL -->
-        <aside class="menu">
+
+        <!-- ===================================== -->
+        <!-- MENU SUPERIOR -->
+        <!-- ===================================== -->
+
+        <header class="menu-superior">
+
+
+            <!-- LOGO -->
 
             <div class="logo-area">
 
-    
+              
 
                 <div class="logo-texto">
+
                     <strong>Avalia+</strong>
+
                     <span>Painel de Gestão</span>
+
                 </div>
 
             </div>
 
 
-            <!-- MENU -->
+
+            <!-- NAVEGAÇÃO -->
+
             <nav class="navegacao">
 
-                <a href="visaoGeral.html" class="menu-item">
-                    <span class="icone">📊</span>
-                    <span>Visão Geral</span>
+
+                <!-- VISÃO GERAL -->
+
+                <a
+                    href="visaoGeral.html"
+                    class="menu-item"
+                >
+
+                  
+
+                    <span>
+                        Visão Geral
+                    </span>
+
                 </a>
 
-                <a href="setor.html" class="menu-item ativo">
-                    <span class="icone">🏢</span>
-                    <span>Setores</span>
+
+
+                <!-- SETORES -->
+
+                <a
+                    href="setor.html"
+                    class="menu-item ativo"
+                >
+
+        
+
+                    <span>
+                        Setores
+                    </span>
+
                 </a>
 
-                <a href="avaliacoes.html" class="menu-item">
-                    <span class="icone">⭐</span>
-                    <span>Avaliações</span>
+
+
+                <!-- AVALIAÇÕES -->
+
+                <a
+                    href="avaliacao.html"
+                    class="menu-item"
+                >
+
+                    <span>
+                        Avaliações
+                    </span>
+
                 </a>
+
+
+
+                <!-- SAIR -->
+
+                <button
+                    class="menu-item botao-sair"
+                    onclick="sair()"
+                >
+
+                    <span class="icone">
+                        ↪
+                    </span>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
 
             </nav>
 
 
-            <!-- PERFIL -->
-            <div class="perfil">
-
-                <div class="avatar">
-                    A
-                </div>
-
-               
-
-                <button class="botao-sair" onclick="sair()">
-                    ↪ Sair
-                </button>
-
-            </div>
-
-        </aside>
+        </header>
 
 
-        <!-- CONTEÚDO -->
+
+        <!-- ===================================== -->
+        <!-- CONTEÚDO PRINCIPAL -->
+        <!-- ===================================== -->
+
         <main class="conteudo">
 
-            <!-- TOPO -->
+
+            <!-- TOPO DA PÁGINA -->
+
             <header class="topo">
 
-                <h1>Setores</h1>
+
+                <h1>
+                    Setores
+                </h1>
+
 
                 <div class="usuario-topo">
+
                     <span class="ponto"></span>
+
                     Gestor
+
                 </div>
+
 
             </header>
 
 
+
+            <!-- ===================================== -->
             <!-- ÁREA PRINCIPAL -->
+            <!-- ===================================== -->
+
             <section class="area-principal">
+
+
+                <!-- CABEÇALHO -->
 
                 <div class="cabecalho-pagina">
 
+
                     <div>
-                        <h2>Setores</h2>
+
+                        <h2>
+                            Setores
+                        </h2>
+
 
                         <p id="quantidadeSetores">
-                            4 setores cadastrados
+                            Carregando setores...
                         </p>
+
                     </div>
 
-                    <button class="botao-novo" onclick="abrirModal()">
-                        <span>+</span>
+
+
+                    <!-- BOTÃO NOVO SETOR -->
+
+                    <button
+                        class="botao-novo"
+                        onclick="abrirModal()"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
                         Novo Setor
+
                     </button>
 
+
                 </div>
 
 
-                <!-- CARDS -->
-                <div class="lista-setores" id="listaSetores">
+
+                <!-- ===================================== -->
+                <!-- LISTA DOS SETORES -->
+                <!-- ===================================== -->
+
+                <!--
+                    Os cards dos setores serão
+                    criados automaticamente pelo
+                    JavaScript através dos dados
+                    vindos do banco de dados.
+                -->
+
+                <div
+                    class="lista-setores"
+                    id="listaSetores"
+                >
+
                 </div>
+
 
             </section>
 
+
         </main>
+
 
     </div>
 
 
-    <!-- MODAL NOVO SETOR -->
 
-    <div class="modal-fundo" id="modal">
+    <!-- ===================================== -->
+    <!-- MODAL - NOVO SETOR -->
+    <!-- ===================================== -->
+
+    <div
+        class="modal-fundo"
+        id="modal"
+    >
+
 
         <div class="modal">
 
+
+            <!-- CABEÇALHO DO MODAL -->
+
             <div class="modal-cabecalho">
 
+
                 <div>
-                    <h2>Novo Setor</h2>
-                    <p>Cadastre um novo setor para avaliação.</p>
+
+                    <h2>
+                        Novo Setor
+                    </h2>
+
+
+                    <p>
+                        Cadastre um novo setor para avaliação.
+                    </p>
+
                 </div>
 
-                <button class="fechar" onclick="fecharModal()">
+
+
+                <!-- FECHAR -->
+
+                <button
+                    class="fechar"
+                    onclick="fecharModal()"
+                >
+
                     ×
+
                 </button>
+
 
             </div>
 
 
+
+            <!-- ===================================== -->
+            <!-- FORMULÁRIO -->
+            <!-- ===================================== -->
+
             <form id="formSetor">
 
+
+                <!-- NOME -->
+
                 <div class="campo">
+
 
                     <label for="nomeSetor">
                         Nome do setor
                     </label>
 
+
                     <input
                         type="text"
                         id="nomeSetor"
                         placeholder="Ex.: Entrega"
+                        maxlength="100"
                         required
                     >
+
 
                 </div>
 
 
+
+                <!-- PERGUNTA -->
+
                 <div class="campo">
+
 
                     <label for="perguntaSetor">
                         Pergunta de avaliação
                     </label>
 
+
                     <textarea
                         id="perguntaSetor"
                         placeholder="Ex.: Como você avalia nosso serviço de entrega?"
+                        maxlength="100"
                         required
                     ></textarea>
+
 
                 </div>
 
 
+
+                <!-- BOTÕES -->
+
                 <div class="botoes-modal">
+
 
                     <button
                         type="button"
                         class="botao-cancelar"
-                        onclick="fecharModal()">
+                        onclick="fecharModal()"
+                    >
+
                         Cancelar
+
                     </button>
+
+
 
                     <button
                         type="submit"
-                        class="botao-cadastrar">
+                        class="botao-cadastrar"
+                    >
+
                         Cadastrar setor
+
                     </button>
+
 
                 </div>
 
+
             </form>
 
+
         </div>
+
 
     </div>
 
 
-     <script src="../js/setor.js"></script>
+
+    <!-- ===================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================== -->
+
+    <script src="../js/setor.js"></script>
+
+
 </body>
+
 </html>
