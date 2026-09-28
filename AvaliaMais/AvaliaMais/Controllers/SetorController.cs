@@ -19,7 +19,6 @@ namespace AvaliaMais.Controllers
         public IActionResult ListarSetores()
         {
             var lista = _context.Setores
-                .Where(s => s.Ativo)
                 .ToList();
 
             return Ok(lista);
@@ -115,6 +114,7 @@ namespace AvaliaMais.Controllers
 
             setorBanco.Nome = setor.Nome;
             setorBanco.Pergunta = setor.Pergunta;
+            setorBanco.Ativo = setor.Ativo;
 
             _context.SaveChanges();
 

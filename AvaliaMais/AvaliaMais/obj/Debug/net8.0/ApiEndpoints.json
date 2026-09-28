@@ -1,5 +1,46 @@
 [
   {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "CadastrarAvaliacao",
+    "RelativePath": "Avaliacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idSetor",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "notaSetor",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "notaEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "comentario",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "ListarSetores",
+    "RelativePath": "Avaliacao/setores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AvaliaMais.Controllers.SetorController",
     "Method": "ListarSetores",
     "RelativePath": "Setor",

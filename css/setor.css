@@ -870,7 +870,62 @@ body {
     background: #1565C0;
 }
 
+/* STATUS DO SETOR */
 
+.status-setor {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-setor.ativo {
+    color: #198754;
+}
+
+.status-setor.desativado {
+    color: #777;
+}
+
+/* SETOR DESATIVADO */
+
+.card-setor.setor-desativado {
+    opacity: 0.65;
+}
+
+.card-setor.setor-desativado .icone-setor {
+    filter: grayscale(100%);
+}
+
+.card-setor.setor-desativado h3 {
+    color: #777;
+}
+
+.filtros-setor {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro {
+    padding: 8px 18px;
+    border: 1px solid #d9e0ea;
+    border-radius: 8px;
+    background: white;
+    color: #555;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filtro:hover {
+    background: #f5f7fa;
+}
+
+.filtro.ativo {
+    background: #17357c;
+    color: white;
+    border-color: #17357c;
+}
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
