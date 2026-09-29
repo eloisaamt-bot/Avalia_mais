@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef3fb;
+    color: #172f67;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalho {
+    height: 72px;
+    background-color: #1f3368;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+
+    box-shadow: 0 2px 8px rgba(31, 51, 104, 0.15);
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-icone {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 11px;
+
+    background-color: #f9ad18;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+    box-shadow: 0 3px 8px rgba(249, 173, 24, 0.30);
+}
+
+
+.logo-area h1 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+
+.logo-area span {
+    color: #b9c6df;
+    font-size: 13px;
+}
+
+
+.area-gestor {
+    color: #c5d0e5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.area-gestor:hover {
+    color: #f9ad18;
+}
+
+
+/* ==========================================
+   PÁGINA
+========================================== */
+
+.pagina {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 48px 20px 90px;
+}
+
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+.titulo-area {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+
+.titulo-area h2 {
+    color: #1f3c78;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.titulo-area p {
+    color: #7186ad;
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   CONTADOR
+========================================== */
+
+.contador {
+    text-align: center;
+
+    color: #7186ad;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   CARDS DOS SETORES
+========================================== */
+
+.lista-setores {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.botao-setor {
+    width: 100%;
+
+    min-height: 125px;
+
+    background-color: #ffffff;
+
+    border: 2px solid transparent;
+
+    border-radius: 15px;
+
+    padding: 24px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: flex-start;
+
+    text-align: left;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+
+.botao-setor:hover {
+    transform: translateY(-3px);
+
+    border-color: #b9c9e8;
+
+    box-shadow: 0 7px 20px rgba(31, 60, 120, 0.12);
+}
+
+
+/* ==========================================
+   ÍCONES DOS SETORES
+========================================== */
+
+.icone-setor {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background-color: #fff3d6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    margin-right: 16px;
+}
+
+
+/* Alternância visual dos cards */
+
+.botao-setor:nth-child(2n) .icone-setor {
+    background-color: #f7ebe9;
+}
+
+.botao-setor:nth-child(3n) .icone-setor {
+    background-color: #f1eafd;
+}
+
+.botao-setor:nth-child(4n) .icone-setor {
+    background-color: #e7f0ff;
+}
+
+
+/* ==========================================
+   CONTEÚDO DO SETOR
+========================================== */
+
+.conteudo-setor {
+    padding-top: 2px;
+}
+
+
+.nome-setor {
+    color: #17336f;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.descricao-setor {
+    color: #8294b5;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   SETOR JÁ AVALIADO
+========================================== */
+
+.botao-setor:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.55;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ==========================================
+   PERGUNTA
+========================================== */
+
+.area-pergunta {
+    margin-top: 25px;
+}
+
+
+.pergunta-card,
+.geral-card {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    border-top: 4px solid #f9ad18;
+
+    box-shadow: 0 4px 18px rgba(31, 51, 104, 0.09);
+}
+
+
+.pergunta-card h3 {
+    color: #17336f;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.pergunta-card p {
+    color: #7f91b2;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+.titulo-nota {
+    color: #17336f;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   NOTAS
+========================================== */
+
+.notas {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+
+.botao-nota {
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid #d4deef;
+
+    border-radius: 50%;
+
+    background-color: #ffffff;
+
+    color: #1f3c78;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.botao-nota:hover {
+    background-color: #fff5dd;
+
+    border-color: #f9ad18;
+
+    color: #d98d00;
+}
+
+
+.botao-nota.selecionado {
+    background-color: #f9ad18;
+
+    color: #ffffff;
+
+    border-color: #f9ad18;
+
+    box-shadow: 0 3px 8px rgba(249, 173, 24, 0.30);
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.acoes {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.botao-principal,
+.botao-secundario {
+    flex: 1;
+
+    padding: 13px 18px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-principal {
+    background-color: #1f3c78;
+
+    color: #ffffff;
+
+    border: none;
+
+    box-shadow: 0 3px 8px rgba(31, 60, 120, 0.20);
+}
+
+
+.botao-principal:hover {
+    background-color: #172f67;
+
+    transform: translateY(-1px);
+}
+
+
+.botao-secundario {
+    background-color: #ffffff;
+
+    color: #1f3c78;
+
+    border: 2px solid #cbd7ea;
+}
+
+
+.botao-secundario:hover {
+    background-color: #eef3fb;
+
+    border-color: #9db1d5;
+}
+
+
+/* ==========================================
+   AVALIAÇÃO GERAL
+========================================== */
+
+.etapa-geral {
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+.notas-gerais {
+    justify-content: center;
+}
+
+
+.notas-gerais .botao-nota {
+    width: 43px;
+    height: 43px;
+}
+
+
+.geral-card label {
+    display: block;
+
+    color: #17336f;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.geral-card label span {
+    color: #8a9abc;
+
+    font-weight: normal;
+}
+
+
+textarea {
+    width: 100%;
+
+    min-height: 110px;
+
+    padding: 12px;
+
+    resize: vertical;
+
+    border: 2px solid #d5deed;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #17336f;
+
+    margin-bottom: 18px;
+
+    transition: 0.2s;
+}
+
+
+textarea:focus {
+    border-color: #f9ad18;
+
+    box-shadow: 0 0 0 3px rgba(249, 173, 24, 0.10);
+}
+
+
+textarea::placeholder {
+    color: #a2afc5;
+}
+
+
+.botao-enviar {
+    width: 100%;
+}
+
+
+/* ==========================================
+   FINALIZAÇÃO
+========================================== */
+
+.mensagem-final {
+    text-align: center;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 45px 30px;
+
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    border-top: 4px solid #f9ad18;
+
+    box-shadow: 0 4px 18px rgba(31, 51, 104, 0.09);
+}
+
+
+.check-final {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background-color: #e5f7ed;
+
+    color: #299354;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin: 0 auto 20px;
+
+    border: 2px solid #bce7ce;
+}
+
+
+.mensagem-final h2 {
+    color: #17336f;
+
+    margin-bottom: 10px;
+}
+
+
+.mensagem-final p {
+    color: #8292ae;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.rodape {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background-color: #e7edf8;
+
+    color: #7186ad;
+
+    font-size: 12px;
+
+    border-top: 1px solid #d8e1f0;
+}
+
+
+/* ==========================================
+   OCULTO
+========================================== */
+
+.oculto {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        padding: 0 18px;
+    }
+
+
+    .area-gestor {
+        font-size: 0;
+    }
+
+
+    .area-gestor::before {
+        content: "🔒";
+        font-size: 16px;
+    }
+
+
+    .pagina {
+        padding-top: 35px;
+    }
+
+
+    .titulo-area h2 {
+        font-size: 28px;
+    }
+
+
+    .titulo-area p {
+        font-size: 16px;
+    }
+
+
+    .lista-setores {
+        grid-template-columns: 1fr;
+    }
+
+
+    .acoes {
+        flex-direction: column;
+    }
+
+
+    .pergunta-card,
+    .geral-card {
+        padding: 22px;
+    }
+
+}

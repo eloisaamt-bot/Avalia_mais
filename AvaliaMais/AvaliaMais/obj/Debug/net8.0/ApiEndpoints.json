@@ -8,24 +8,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idSetor",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "notaSetor",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "notaEmpresa",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "comentario",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "pesquisa",
+        "Type": "AvaliaMais.Controllers.PesquisaAvaliacao",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

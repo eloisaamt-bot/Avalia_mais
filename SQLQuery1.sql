@@ -1,4 +1,4 @@
-CREATE DATABASE Avalia_mais;
+﻿CREATE DATABASE Avalia_mais;
 GO
 
 USE Avalia_mais;
@@ -26,7 +26,7 @@ CREATE TABLE setores (
     fk_usuarios_id INTEGER
 );
 
-CREATE TABLE avalicao_setor (
+CREATE TABLE avaliacoes_setor (
     id INTEGER IDENTITY PRIMARY KEY,
     nota INTEGER,
     fk_setores_id INTEGER,
@@ -38,12 +38,12 @@ ALTER TABLE setores ADD CONSTRAINT FK_setores_2
     REFERENCES usuarios (id)
     ON DELETE NO ACTION ;
  
-ALTER TABLE avalicao_setor ADD CONSTRAINT FK_avalicao_setor_2
+ALTER TABLE avaliacoes_setor ADD CONSTRAINT FK_avaliacao_setor_2
     FOREIGN KEY (fk_setores_id)
     REFERENCES setores (id)
    ON DELETE NO ACTION ;
 
-ALTER TABLE avalicao_setor ADD CONSTRAINT FK_avalicao_setor_3
+ALTER TABLE avaliacoes_setor ADD CONSTRAINT FK_avaliacao_setor_3
     FOREIGN KEY (fk_avaliacoes_id)
     REFERENCES avaliacoes (id)
      ON DELETE NO ACTION ;
@@ -73,7 +73,7 @@ INSERT INTO avaliacoes ( nota, comentario, data_hora) VALUES
 
 
 -- AVALIA??ES POR SETOR
-INSERT INTO avalicao_setor ( nota, fk_setores_id, fk_avaliacoes_id) VALUES
+INSERT INTO avaliacoes_setor ( nota, fk_setores_id, fk_avaliacoes_id) VALUES
 -- Avalia??o 1
 ( 5, 1, 1),
 ( 4, 2, 1),

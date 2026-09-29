@@ -1,22 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação</title>
-    <link rel="stylesheet" href="../css/avaliacao.css">
 
+    <title>Avalia+ | Avaliação</title>
+
+    <link rel="stylesheet" href="../css/avaliacao.css">
 </head>
 
 <body>
 
+    <!-- CABEÇALHO -->
 
-<body>
+    <header class="cabecalho">
 
-    
+        <div class="logo-area">
+
+            <div class="logo-icone">
+                ★
+            </div>
+
+            <div>
+                <h1>Avalia+</h1>
+                <span>Sistema de Avaliação</span>
+            </div>
+
+        </div>
+
+        <a href="telaLog.html" class="area-gestor">
+            🔒 &nbsp; Área do Gestor
+        </a>
+
+    </header>
+
+
+    <main class="pagina">
+
+
+        <!-- =====================================
+             ETAPA DOS SETORES
+        ====================================== -->
+
+        <section id="etapaSetor">
+
+            <div class="titulo-area">
+
+                <h2>Como foi sua experiência?</h2>
+
+                <p>
+                    Selecione o setor que deseja avaliar
+                </p>
+
+            </div>
+
+
+            <p id="contadorSetores" class="contador"></p>
+
+
+            <div id="listaSetores" class="lista-setores"></div>
+
+
+            <!-- PERGUNTA DO SETOR -->
+
+            <div id="areaPergunta" class="area-pergunta oculto">
+
+                <div class="pergunta-card">
+
+                    <h3 id="nomeSetor"></h3>
+
+                    <p id="perguntaSetor"></p>
+
+
+                    <div class="titulo-nota">
+                        Como você avalia este setor?
+                    </div>
+
+
+                    <div id="notasSetor" class="notas"></div>
+
+
+                    <div class="acoes">
+
+                        <button
+                            id="btnProximo"
+                            class="botao-secundario"
+                            type="button">
+
+                            Avaliar outro setor
+
+                        </button>
+
+
+                        <button
+                            id="btnFinalizar"
+                            class="botao-principal"
+                            type="button">
+
+                            Finalizar pesquisa
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ETAPA AVALIAÇÃO GERAL
+        ====================================== -->
+
+        <section id="etapaGeral" class="etapa-geral oculto">
+
+            <div class="titulo-area">
+
+                <h2>Avaliação geral</h2>
+
+                <p>
+                    De 1 a 10, como você avalia sua experiência?
+                </p>
+
+            </div>
+
+
+            <div class="geral-card">
+
+                <div class="titulo-nota">
+                    Selecione uma nota
+                </div>
+
+                <div id="notasGeral" class="notas notas-gerais"></div>
+
+
+                <label for="comentario">
+                    Comentário <span>(opcional)</span>
+                </label>
+
+                <textarea
+                    id="comentario"
+                    maxlength="100"
+                    placeholder="Não informe dados pessoais neste campo."></textarea>
+
+
+                <button
+                    id="btnEnviar"
+                    class="botao-principal botao-enviar"
+                    type="button">
+
+                    Enviar avaliação
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MENSAGEM FINAL
+        ====================================== -->
+
+        <section id="mensagemFinal" class="mensagem-final oculto">
+
+            <div class="check-final">
+                ✓
+            </div>
+
+            <h2>Obrigado pela sua avaliação!</h2>
+
+            <p>
+                Sua resposta foi registrada com sucesso.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- AVISO LGPD -->
+
+    <footer class="rodape">
+
+        🔒 Sua avaliação é completamente anônima.
+        Nenhum dado pessoal é coletado.
+
+    </footer>
+
 
     <script src="../js/avaliacao.js"></script>
+
 </body>
 
 </html>

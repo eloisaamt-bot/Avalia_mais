@@ -7,7 +7,7 @@ namespace AvaliaMais.Data
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Setor> Setores { get; set; }
         public DbSet<Avaliacao> Avaliacoes { get; set; }
-        public DbSet<Avaliacao_Setor> Avaliacao_Setor { get; set;}
+        public DbSet<Avaliacao_Setor> Avaliacoes_Setor { get; set;}
 
         public AvaliaMaisContext(DbContextOptions<AvaliaMaisContext> options)
             : base(options) 

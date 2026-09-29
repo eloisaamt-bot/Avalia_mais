@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\data\\avaliamaiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\avaliacao_setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\avaliacao_setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +17,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\avaliacao_setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\models\\avaliacao_setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|solutionrelative:avaliamais\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506B2B6C-B5EA-4142-A664-86E3C55C924D}|AvaliaMais\\AvaliaMais.csproj|e:\\eloisa\\eloisa trabalho\\avalia\u002B\\avalia_mais\\avaliamais\\avaliamais\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,37 +54,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Avaliacao_Setor.cs",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Avaliacao_Setor.cs",
-              "RelativeDocumentMoniker": "AvaliaMais\\Models\\Avaliacao_Setor.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Avaliacao_Setor.cs",
-              "RelativeToolTip": "AvaliaMais\\Models\\Avaliacao_Setor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T13:59:21.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AvaliaMaisContext.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
               "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Data\\AvaliaMaisContext.cs",
               "RelativeToolTip": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T13:35:23.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SetorController.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\SetorController.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\SetorController.cs",
@@ -97,20 +84,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AvaliacaoController.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\AvaliacaoController.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs*",
-              "RelativeToolTip": "AvaliaMais\\Controllers\\AvaliacaoController.cs*",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAowF4AAAAoAAAAAAAAAA==",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\AvaliacaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T12:59:11.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Avaliacao.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Avaliacao.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Models\\Avaliacao.cs",
@@ -123,20 +110,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\UsuarioController.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAkAAAArAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Avaliacao_Setor.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Avaliacao_Setor.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Models\\Avaliacao_Setor.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Avaliacao_Setor.cs",
+              "RelativeToolTip": "AvaliaMais\\Models\\Avaliacao_Setor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T11:00:18.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T13:59:21.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Setor.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Setor.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Models\\Setor.cs",
@@ -149,6 +135,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T11:00:18.676Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Usuario.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Models\\Usuario.cs",
@@ -157,8 +155,7 @@
               "RelativeToolTip": "AvaliaMais\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T12:00:08.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T12:00:08.966Z"
             },
             {
               "$type": "Document",
