@@ -1,4 +1,4 @@
-﻿CREATE DATABASE Avalia_mais;
+CREATE DATABASE Avalia_mais;
 GO
 
 USE Avalia_mais;

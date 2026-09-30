@@ -25,22 +25,52 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PesquisaAvaliacao"
-              }
+              "schema": { }
             },
             "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PesquisaAvaliacao"
-              }
+              "schema": { }
             },
             "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PesquisaAvaliacao"
-              }
+              "schema": { }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Avaliacao/resumo": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Avaliacao/desempenho-setores": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Avaliacao/recentes": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -239,41 +269,6 @@
   },
   "components": {
     "schemas": {
-      "AvaliacaoSetorRequest": {
-        "type": "object",
-        "properties": {
-          "idSetor": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nota": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PesquisaAvaliacao": {
-        "type": "object",
-        "properties": {
-          "nota": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "comentario": {
-            "type": "string",
-            "nullable": true
-          },
-          "setores": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AvaliacaoSetorRequest"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Setor": {
         "type": "object",
         "properties": {

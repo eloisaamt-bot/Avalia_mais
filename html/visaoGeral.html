@@ -1,16 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Visão Geral</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="../css/visaoGeral.css">
+
 </head>
+
 
 <body>
 
+    <div class="pagina">
+
+
+        <!-- ===================================== -->
+        <!-- MENU SUPERIOR -->
+        <!-- ===================================== -->
+
+        <header class="menu-superior">
+
+
+            <!-- LOGO -->
+
+            <div class="logo-area">
+
+                <div class="logo-texto">
+
+                    <strong>Avalia+</strong>
+
+                    <span>
+                        Painel de Gestão
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav class="navegacao">
+
+
+                <!-- VISÃO GERAL -->
+
+                <a href="visaoGeral.html" class="menu-item ativo">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>
+                        Visão Geral
+                    </span>
+
+                </a>
+
+
+                <!-- SETORES -->
+
+                <a href="setor.html" class="menu-item">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span>
+                        Setores
+                    </span>
+
+                </a>
+
+
+                <!-- AVALIAÇÕES -->
+
+                <a href="avaliacao.html" class="menu-item">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+                        Avaliações
+                    </span>
+
+                </a>
+
+
+                <!-- SAIR -->
+
+                <button class="menu-item botao-sair" onclick="sair()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+
+            </nav>
+
+
+        </header>
+
+
+
+        <!-- ===================================== -->
+        <!-- CONTEÚDO -->
+        <!-- ===================================== -->
+
+        <main class="conteudo">
+
+
+            <!-- ================================= -->
+            <!-- TOPO -->
+            <!-- ================================= -->
+
+            <header class="topo">
+
+                <div></div>
+
+                <div class="usuario-topo">
+
+                    <span class="ponto"></span>
+
+                    Gestor
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================================= -->
+            <!-- ÁREA PRINCIPAL -->
+            <!-- ================================= -->
+
+            <section class="area-principal">
+
+
+                <!-- CABEÇALHO -->
+
+                <div class="cabecalho-pagina">
+
+                    <div>
+
+                        <h2>
+                            Visão Geral
+                        </h2>
+
+                        <p>
+                            Acompanhe os resultados das avaliações dos clientes.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FILTRO -->
+
+                    <div class="filtro-periodo">
+
+                        <label for="periodo">
+                            Período
+                        </label>
+
+                        <select id="periodo">
+
+                            <option value="todos">
+                                Todo o período
+                            </option>
+
+                            <option value="7">
+                                Últimos 7 dias
+                            </option>
+
+                            <option value="30">
+                                Últimos 30 dias
+                            </option>
+
+                            <option value="90">
+                                Últimos 90 dias
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- INDICADORES -->
+                <!-- ================================= -->
+
+                <section class="indicadores">
+
+
+                    <!-- TOTAL -->
+
+                    <div class="card-indicador">
+
+                        <div class="icone-indicador azul">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <span class="titulo-indicador">
+                                Total de avaliações
+                            </span>
+
+                            <strong id="totalAvaliacoes">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MÉDIA -->
+
+                    <div class="card-indicador">
+
+                        <div class="icone-indicador amarelo">
+                            ★
+                        </div>
+
+                        <div>
+
+                            <span class="titulo-indicador">
+                                Média geral
+                            </span>
+
+                            <strong id="mediaGeral">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SETORES -->
+
+                    <div class="card-indicador">
+
+                        <div class="icone-indicador verde">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span class="titulo-indicador">
+                                Setores avaliados
+                            </span>
+
+                            <strong id="setoresAvaliados">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- COMENTÁRIOS -->
+
+                    <div class="card-indicador">
+
+                        <div class="icone-indicador roxo">
+                            💬
+                        </div>
+
+                        <div>
+
+                            <span class="titulo-indicador">
+                                Comentários
+                            </span>
+
+                            <strong id="totalComentarios">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ================================= -->
+                <!-- DESEMPENHO DOS SETORES -->
+                <!-- ================================= -->
+
+                <section class="secao">
+
+                    <div class="cabecalho-secao">
+
+                        <div>
+
+                            <h3>
+                                Desempenho dos setores
+                            </h3>
+
+                            <p>
+                                Média das avaliações recebidas por cada setor.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="listaDesempenho" class="lista-desempenho">
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ================================= -->
+                <!-- AVALIAÇÕES RECENTES -->
+                <!-- ================================= -->
+
+                <section class="secao">
+
+                    <div class="cabecalho-secao">
+
+                        <div>
+
+                            <h3>
+                                Avaliações recentes
+                            </h3>
+
+                            <p>
+                                Últimas avaliações registradas no sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="listaAvaliacoes" class="lista-avaliacoes">
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
     <script src="../js/visaoGeral.js"></script>
+
 </body>
 
 </html>

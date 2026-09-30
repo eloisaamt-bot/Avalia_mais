@@ -1,13 +1,486 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avalie+</title>
+
+    <title>Avalia+ | Pesquisa de Satisfação</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <link rel="stylesheet" href="../css/telaCliente.css">
+
 </head>
+
+
 <body>
-    
-     <script src="../js/cliente.js"></script>
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo-area">
+
+           
+
+            <div class="logo-texto">
+
+                <strong>Avalia+</strong>
+
+                <span>
+                    Pesquisa de satisfação
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="telaLog.html"
+            class="area-gestor"
+        >
+
+            <i class="fa-solid fa-lock"></i>
+
+            <span>
+                Área do Gestor
+            </span>
+
+        </a>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main class="pagina">
+
+
+        <!-- =====================================
+             ETAPA DOS SETORES
+        ====================================== -->
+
+        <section id="etapaSetor">
+
+
+            <div class="progresso-area">
+
+                <div class="progresso-topo">
+
+                    <span>
+                        <i class="fa-solid fa-list-check"></i>
+                        Pesquisa de satisfação
+                    </span>
+
+                    <span id="contadorSetores">
+                        Setores avaliados: 0
+                    </span>
+
+                </div>
+
+                <div class="barra-progresso">
+
+                    <div
+                        id="barraProgresso"
+                        class="progresso"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="titulo-area">
+
+                <div class="icone-titulo">
+
+                    <i class="fa-solid fa-face-smile"></i>
+
+                </div>
+
+                <div>
+
+                    <span class="etiqueta">
+                        SUA OPINIÃO É IMPORTANTE
+                    </span>
+
+                    <h2>
+                        Como foi sua experiência?
+                    </h2>
+
+                    <p>
+                        Selecione um setor para avaliar.
+                        Você pode avaliar quantos setores desejar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaSetores"
+                class="lista-setores"
+            ></div>
+
+
+            <!-- =================================
+                 PERGUNTA DO SETOR
+            ================================== -->
+
+            <div
+                id="areaPergunta"
+                class="area-pergunta oculto"
+            >
+
+                <div class="pergunta-card">
+
+
+                    <div class="pergunta-topo">
+
+                        <div class="icone-pergunta">
+
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AVALIAÇÃO DO SETOR
+                            </span>
+
+                            <h3 id="nomeSetor"></h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        id="perguntaSetor"
+                        class="pergunta-texto"
+                    ></p>
+
+
+                    <div class="titulo-nota">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        Como você avalia este setor?
+
+                    </div>
+
+
+                    <div class="legenda-notas">
+
+                        <span>
+                            1 — Muito ruim
+                        </span>
+
+                        <span>
+                            5 — Excelente
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="notasSetor"
+                        class="notas"
+                    ></div>
+
+
+                    <div class="acoes">
+
+                        <button
+                            id="btnProximo"
+                            class="botao-secundario"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Avaliar outro setor
+
+                        </button>
+
+
+                        <button
+                            id="btnFinalizar"
+                            class="botao-principal"
+                            type="button"
+                        >
+
+                            Finalizar pesquisa
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             AVALIAÇÃO GERAL
+        ====================================== -->
+
+        <section
+            id="etapaGeral"
+            class="etapa-geral oculto"
+        >
+
+
+            <div class="progresso-area">
+
+                <div class="progresso-topo">
+
+                    <span>
+
+                        <i class="fa-solid fa-chart-simple"></i>
+
+                        Etapa final
+
+                    </span>
+
+                    <span>
+                        Avaliação geral
+                    </span>
+
+                </div>
+
+                <div class="barra-progresso">
+
+                    <div
+                        class="progresso progresso-final"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="titulo-area">
+
+                <div class="icone-titulo geral">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+                <div>
+
+                    <span class="etiqueta">
+                        ÚLTIMA ETAPA
+                    </span>
+
+                    <h2>
+                        Avaliação geral
+                    </h2>
+
+                    <p>
+                        De 1 a 10, como você avalia sua experiência conosco?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="geral-card">
+
+
+                <div class="escala-cabecalho">
+
+                    <div>
+
+                        <span class="mini-label">
+                            NOTA GERAL
+                        </span>
+
+                        <h3>
+                            Qual nota você daria?
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-ranking-star"></i>
+
+                </div>
+
+
+                <div class="titulo-nota">
+
+                    <i class="fa-regular fa-circle-check"></i>
+
+                    Selecione uma nota de 1 a 10
+
+                </div>
+
+
+                <div
+                    id="notasGeral"
+                    class="notas notas-gerais"
+                ></div>
+
+
+                <div class="escala-legenda">
+
+                    <span>
+                        1 — Péssima
+                    </span>
+
+                    <span>
+                        5 — Regular
+                    </span>
+
+                    <span>
+                        10 — Excelente
+                    </span>
+
+                </div>
+
+
+                <div class="campo-comentario">
+
+                    <label for="comentario">
+
+                        <i class="fa-regular fa-comment-dots"></i>
+
+                        Comentário
+
+                        <span>
+                            (opcional)
+                        </span>
+
+                    </label>
+
+
+                    <textarea
+                        id="comentario"
+                        maxlength="100"
+                        placeholder="Conte-nos um pouco sobre sua experiência..."
+                    ></textarea>
+
+
+                    <div class="aviso-comentario">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Não informe dados pessoais neste campo.
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="btnEnviar"
+                    class="botao-principal botao-enviar"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Enviar avaliação
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MENSAGEM FINAL
+        ====================================== -->
+
+        <section
+            id="mensagemFinal"
+            class="mensagem-final oculto"
+        >
+
+            <div class="check-final">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <span class="sucesso-label">
+                PESQUISA CONCLUÍDA
+            </span>
+
+
+            <h2>
+                Obrigado pela sua avaliação!
+            </h2>
+
+
+            <p>
+                Sua resposta foi registrada com sucesso.
+                Sua opinião nos ajuda a melhorar nossos serviços.
+            </p>
+
+
+            <div class="linha-final">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Sua avaliação foi registrada de forma anônima.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer class="rodape">
+
+        <span>
+
+            <i class="fa-solid fa-lock"></i>
+
+            Sua avaliação é completamente anônima.
+
+        </span>
+
+        <span class="separador">
+            •
+        </span>
+
+        <span>
+            Nenhum dado pessoal é coletado.
+        </span>
+
+    </footer>
+
+
+    <script src="../js/cliente.js"></script>
+
 </body>
+
 </html>

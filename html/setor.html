@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Setores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
     <link rel="stylesheet" href="../css/setor.css">
 
@@ -30,7 +32,7 @@
 
             <div class="logo-area">
 
-              
+
 
                 <div class="logo-texto">
 
@@ -51,12 +53,9 @@
 
                 <!-- VISÃO GERAL -->
 
-                <a
-                    href="visaoGeral.html"
-                    class="menu-item"
-                >
+                <a href="visaoGeral.html" class="menu-item">
 
-                  
+                    <i class="fa-solid fa-chart-column"></i>
 
                     <span>
                         Visão Geral
@@ -68,12 +67,9 @@
 
                 <!-- SETORES -->
 
-                <a
-                    href="setor.html"
-                    class="menu-item ativo"
-                >
+                <a href="setor.html" class="menu-item ativo">
 
-        
+                    <i class="fa-solid fa-layer-group"></i>
 
                     <span>
                         Setores
@@ -85,10 +81,8 @@
 
                 <!-- AVALIAÇÕES -->
 
-                <a
-                    href="avaliacao.html"
-                    class="menu-item"
-                >
+                <a href="avaliacao.html" class="menu-item">
+                    <i class="fa-solid fa-star"></i>
 
                     <span>
                         Avaliações
@@ -100,14 +94,9 @@
 
                 <!-- SAIR -->
 
-                <button
-                    class="menu-item botao-sair"
-                    onclick="sair()"
-                >
+                <button class="menu-item botao-sair" onclick="sair()">
 
-                    <span class="icone">
-                        ↪
-                    </span>
+                   <i class="fa-solid fa-right-from-bracket"></i>
 
                     <span>
                         Sair
@@ -135,7 +124,7 @@
             <header class="topo">
 
 
-                
+
 
 
                 <div class="usuario-topo">
@@ -180,10 +169,7 @@
 
                     <!-- BOTÃO NOVO SETOR -->
 
-                    <button
-                        class="botao-novo"
-                        onclick="abrirModal()"
-                    >
+                    <button class="botao-novo" onclick="abrirModal()">
 
                         <span>
                             +
@@ -197,30 +183,21 @@
                 </div>
 
 
-<div class="filtros-setor">
+                <div class="filtros-setor">
 
-    <button
-        type="button"
-        class="filtro ativo"
-        onclick="filtrarSetores('todos', this)">
-        Todos
-    </button>
+                    <button type="button" class="filtro ativo" onclick="filtrarSetores('todos', this)">
+                        Todos
+                    </button>
 
-    <button
-        type="button"
-        class="filtro"
-        onclick="filtrarSetores('ativos', this)">
-        Ativos
-    </button>
+                    <button type="button" class="filtro" onclick="filtrarSetores('ativos', this)">
+                        Ativos
+                    </button>
 
-    <button
-        type="button"
-        class="filtro"
-        onclick="filtrarSetores('inativos', this)">
-        Inativos
-    </button>
+                    <button type="button" class="filtro" onclick="filtrarSetores('inativos', this)">
+                        Inativos
+                    </button>
 
-</div>
+                </div>
                 <!-- ===================================== -->
                 <!-- LISTA DOS SETORES -->
                 <!-- ===================================== -->
@@ -232,10 +209,7 @@
                     vindos do banco de dados.
                 -->
 
-                <div
-                    class="lista-setores"
-                    id="listaSetores"
-                >
+                <div class="lista-setores" id="listaSetores">
 
                 </div>
 
@@ -254,10 +228,7 @@
     <!-- MODAL - NOVO SETOR -->
     <!-- ===================================== -->
 
-    <div
-        class="modal-fundo"
-        id="modal"
-    >
+    <div class="modal-fundo" id="modal">
 
 
         <div class="modal">
@@ -285,10 +256,7 @@
 
                 <!-- FECHAR -->
 
-                <button
-                    class="fechar"
-                    onclick="fecharModal()"
-                >
+                <button class="fechar" onclick="fecharModal()">
 
                     ×
 
@@ -316,13 +284,7 @@
                     </label>
 
 
-                    <input
-                        type="text"
-                        id="nomeSetor"
-                        placeholder="Ex.: Entrega"
-                        maxlength="100"
-                        required
-                    >
+                    <input type="text" id="nomeSetor" placeholder="Ex.: Entrega" maxlength="100" required>
 
 
                 </div>
@@ -339,12 +301,8 @@
                     </label>
 
 
-                    <textarea
-                        id="perguntaSetor"
-                        placeholder="Ex.: Como você avalia nosso serviço de entrega?"
-                        maxlength="100"
-                        required
-                    ></textarea>
+                    <textarea id="perguntaSetor" placeholder="Ex.: Como você avalia nosso serviço de entrega?"
+                        maxlength="100" required></textarea>
 
 
                 </div>
@@ -356,11 +314,7 @@
                 <div class="botoes-modal">
 
 
-                    <button
-                        type="button"
-                        class="botao-cancelar"
-                        onclick="fecharModal()"
-                    >
+                    <button type="button" class="botao-cancelar" onclick="fecharModal()">
 
                         Cancelar
 
@@ -368,10 +322,7 @@
 
 
 
-                    <button
-                        type="submit"
-                        class="botao-cadastrar"
-                    >
+                    <button type="submit" class="botao-cadastrar">
 
                         Cadastrar setor
 

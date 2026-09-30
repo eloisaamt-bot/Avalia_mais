@@ -906,7 +906,7 @@ if (modal != null) {
 
 function sair() {
 
-    window.location.href = "login.html";
+    window.location.href = "telaLog.html";
 }
 
 

@@ -8,11 +8,41 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pesquisa",
-        "Type": "AvaliaMais.Controllers.PesquisaAvaliacao",
+        "Name": "dados",
+        "Type": "System.Text.Json.JsonElement",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "DesempenhoSetores",
+    "RelativePath": "Avaliacao/desempenho-setores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "AvaliacoesRecentes",
+    "RelativePath": "Avaliacao/recentes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "Resumo",
+    "RelativePath": "Avaliacao/resumo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

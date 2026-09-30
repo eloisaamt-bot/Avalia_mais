@@ -1,0 +1,1041 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #F5F7FA;
+
+    color: #263238;
+}
+
+
+/* ========================================
+   PÁGINA
+======================================== */
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   MENU SUPERIOR
+======================================== */
+
+.menu-superior {
+
+    width: 100%;
+
+    height: 70px;
+
+    background: #17357c;
+
+    display: flex;
+
+    align-items: stretch;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.10);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo-area {
+
+    width: 250px;
+
+    min-width: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 24px;
+}
+
+
+.logo-texto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+}
+
+
+.logo-texto strong {
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.logo-texto span {
+
+    font-size: 12px;
+
+    margin-top: 3px;
+
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   NAVEGAÇÃO
+======================================== */
+
+.navegacao {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: stretch;
+
+    height: 100%;
+}
+
+
+/* ========================================
+   ITEM DO MENU
+======================================== */
+
+.menu-item {
+
+    flex: 1;
+
+    min-width: 130px;
+
+    border: none;
+
+    text-decoration: none;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: 0.2s ease;
+
+    position: relative;
+}
+
+
+.menu-item i {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.menu-item > span:last-child {
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   CORES DO MENU
+======================================== */
+
+.menu-item:nth-child(1) {
+
+    background: #95d389;
+}
+
+
+.menu-item:nth-child(2) {
+
+    background: #6485F6;
+}
+
+
+.menu-item:nth-child(3) {
+
+    background: #f58e8e;
+}
+
+
+.menu-item:nth-child(4) {
+
+    background: #17357c;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.menu-item:hover {
+
+    filter: brightness(1.08);
+}
+
+
+/* ========================================
+   ITEM ATIVO
+======================================== */
+
+.menu-item.ativo::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #f8cd4b;
+}
+
+
+/* ========================================
+   BOTÃO SAIR
+======================================== */
+
+.botao-sair {
+
+    appearance: none;
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.conteudo {
+
+    width: 100%;
+
+    min-height: calc(100vh - 70px);
+
+    background: #F5F7FA;
+}
+
+
+/* ========================================
+   TOPO
+======================================== */
+
+.topo {
+
+    width: 100%;
+
+    height: 75px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    border-bottom: 1px solid #E8EBF0;
+}
+
+
+.usuario-topo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #607D8B;
+
+    font-size: 14px;
+}
+
+
+.ponto {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #43A047;
+}
+
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.area-principal {
+
+    width: 100%;
+
+    padding: 30px 35px 40px;
+}
+
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+======================================== */
+
+.cabecalho-pagina {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.cabecalho-pagina h2 {
+
+    color: #123B72;
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+
+.cabecalho-pagina p {
+
+    color: #607D8B;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FILTRO
+======================================== */
+
+.filtro-periodo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.filtro-periodo label {
+
+    color: #607D8B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.filtro-periodo select {
+
+    height: 40px;
+
+    min-width: 160px;
+
+    padding: 0 12px;
+
+    border: 1px solid #DCE2E8;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #263238;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.filtro-periodo select:focus {
+
+    border-color: #1976D2;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.10);
+}
+
+
+/* ========================================
+   INDICADORES
+======================================== */
+
+.indicadores {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.card-indicador {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 2px 8px rgba(25, 55, 100, 0.04);
+
+    border: 1px solid #E8EBF0;
+}
+
+
+.icone-indicador {
+
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+.icone-indicador.azul {
+
+    background: #EEF4FF;
+
+    color: #1976D2;
+}
+
+
+.icone-indicador.amarelo {
+
+    background: #FFF7DF;
+
+    color: #F2A900;
+}
+
+
+.icone-indicador.verde {
+
+    background: #ECF8EF;
+
+    color: #43A047;
+}
+
+
+.icone-indicador.roxo {
+
+    background: #F1ECFF;
+
+    color: #8458E8;
+}
+
+
+.titulo-indicador {
+
+    display: block;
+
+    color: #8B9BB5;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+.card-indicador strong {
+
+    display: block;
+
+    color: #123B72;
+
+    font-size: 24px;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.secao {
+
+    width: 100%;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(25, 55, 100, 0.04);
+
+    border: 1px solid #E8EBF0;
+}
+
+
+.cabecalho-secao {
+
+    margin-bottom: 22px;
+}
+
+
+.cabecalho-secao h3 {
+
+    color: #123B72;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.cabecalho-secao p {
+
+    color: #607D8B;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   DESEMPENHO DOS SETORES
+======================================== */
+
+.lista-desempenho {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.item-desempenho {
+
+    width: 100%;
+}
+
+
+.informacoes-setor {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+
+.informacoes-setor > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.informacoes-setor strong {
+
+    color: #123B72;
+
+    font-size: 14px;
+}
+
+
+.informacoes-setor span {
+
+    color: #8B9BB5;
+
+    font-size: 12px;
+}
+
+
+.media-setor {
+
+    color: #F2A900 !important;
+
+    font-size: 18px !important;
+}
+
+
+.barra {
+
+    width: 100%;
+
+    height: 9px;
+
+    background: #EEF1F4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.progresso {
+
+    height: 100%;
+
+    background: #6485F6;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* ========================================
+   AVALIAÇÕES RECENTES
+======================================== */
+
+.lista-avaliacoes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.item-avaliacao {
+
+    display: grid;
+
+    grid-template-columns:
+        110px 180px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E8EBF0;
+
+    border-radius: 9px;
+}
+
+
+.nota-avaliacao {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.nota-avaliacao span {
+
+    color: #607D8B;
+
+    font-size: 11px;
+}
+
+
+.nota-avaliacao strong {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #FFF3D6;
+
+    color: #F2A900;
+
+    font-size: 14px;
+}
+
+
+.dados-avaliacao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.dados-avaliacao strong {
+
+    color: #123B72;
+
+    font-size: 13px;
+}
+
+
+.dados-avaliacao span {
+
+    color: #8B9BB5;
+
+    font-size: 11px;
+}
+
+
+.comentario-avaliacao {
+
+    color: #607D8B;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   MENSAGENS
+======================================== */
+
+.mensagem-vazia,
+.mensagem-erro {
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: #607D8B;
+
+    font-size: 14px;
+}
+
+
+.mensagem-erro {
+
+    color: #C62828;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .logo-area {
+
+        width: 210px;
+
+        min-width: 210px;
+
+        padding: 12px 18px;
+    }
+
+
+    .menu-item {
+
+        min-width: 110px;
+    }
+
+
+    .indicadores {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .menu-superior {
+
+        height: auto;
+
+        flex-direction: column;
+    }
+
+
+    .logo-area {
+
+        width: 100%;
+
+        min-width: 0;
+
+        height: 70px;
+
+        justify-content: center;
+
+        padding: 10px;
+    }
+
+
+    .navegacao {
+
+        width: 100%;
+
+        height: 80px;
+
+        overflow-x: auto;
+
+        flex: none;
+    }
+
+
+    .menu-item {
+
+        flex: 0 0 120px;
+
+        min-width: 120px;
+
+        height: 80px;
+    }
+
+
+      .menu-item i {
+    font-size: 22px;
+}
+
+
+    .menu-item > span:last-child {
+
+        font-size: 12px;
+    }
+
+
+    .conteudo {
+
+        min-height: calc(100vh - 150px);
+    }
+
+
+    .topo {
+
+        padding: 0 20px;
+
+        height: 65px;
+    }
+
+
+    .area-principal {
+
+        padding: 25px 20px 35px;
+    }
+
+
+    .cabecalho-pagina {
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .indicadores {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .filtro-periodo {
+
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+
+    .filtro-periodo select {
+
+        flex: 1;
+    }
+
+
+    .item-avaliacao {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 500px) {
+
+    .logo-texto strong {
+
+        font-size: 18px;
+    }
+
+
+    .logo-texto span {
+
+        font-size: 11px;
+    }
+
+
+    .navegacao {
+
+        height: 75px;
+    }
+
+
+    .menu-item {
+
+        flex: 0 0 105px;
+
+        min-width: 105px;
+
+        height: 75px;
+    }
+
+
+   .menu-item i {
+    font-size: 22px;
+}
+
+
+    .menu-item > span:last-child {
+
+        font-size: 11px;
+    }
+
+
+    .topo {
+
+        padding: 0 14px;
+    }
+
+
+    .usuario-topo {
+
+        font-size: 12px;
+    }
+
+
+    .area-principal {
+
+        padding: 20px 12px 30px;
+    }
+
+
+    .cabecalho-pagina {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .filtro-periodo {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .filtro-periodo select {
+
+        width: 100%;
+    }
+
+
+    .secao {
+
+        padding: 18px;
+    }
+
+}

@@ -148,14 +148,13 @@ body {
 }
 
 
-.menu-item .icone {
-    font-size: 25px;
-
+.menu-item i {
+    font-size: 17px;
     line-height: 1;
 }
 
 
-.menu-item > span:last-child {
+.menu-item>span:last-child {
     font-size: 15px;
 
     font-weight: 600;
@@ -926,6 +925,7 @@ body {
     color: white;
     border-color: #17357c;
 }
+
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
@@ -997,13 +997,12 @@ body {
         height: 80px;
     }
 
-
-    .menu-item .icone {
+    .menu-item i {
         font-size: 22px;
     }
 
 
-    .menu-item > span:last-child {
+    .menu-item>span:last-child {
         font-size: 12px;
     }
 
@@ -1090,12 +1089,12 @@ body {
     }
 
 
-    .menu-item .icone {
-        font-size: 20px;
+    .menu-item i {
+        font-size: 22px;
     }
 
 
-    .menu-item > span:last-child {
+    .menu-item>span:last-child {
         font-size: 11px;
     }
 
