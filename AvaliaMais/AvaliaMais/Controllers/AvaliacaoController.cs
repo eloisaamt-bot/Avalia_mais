@@ -17,9 +17,8 @@ namespace AvaliaMais.Controllers
         }
 
 
-        // ==========================================
+
         // BUSCAR SETORES ATIVOS
-        // ==========================================
 
         [HttpGet("setores")]
         public IActionResult ListarSetores()
@@ -32,16 +31,14 @@ namespace AvaliaMais.Controllers
         }
 
 
-        // ==========================================
+       
         // FINALIZAR PESQUISA
-        // ==========================================
 
         [HttpPost]
         public IActionResult CadastrarAvaliacao(JsonElement dados)
         {
-            // ==========================================
-            // NOTA GERAL
-            // ==========================================
+
+         // NOTA GERAL
 
             if (!dados.TryGetProperty("nota", out JsonElement notaJson))
             {
@@ -51,10 +48,8 @@ namespace AvaliaMais.Controllers
             int nota = notaJson.GetInt32();
 
 
-            // ==========================================
-            // COMENTÁRIO
-            // ==========================================
-
+            // COMENTÁRIO 
+            
             string? comentario = null;
 
             if (dados.TryGetProperty("comentario", out JsonElement comentarioJson))
@@ -63,9 +58,8 @@ namespace AvaliaMais.Controllers
             }
 
 
-            // ==========================================
+
             // SETORES
-            // ==========================================
 
             if (!dados.TryGetProperty("setores", out JsonElement setoresJson))
             {
@@ -81,10 +75,9 @@ namespace AvaliaMais.Controllers
             }
 
 
-            // ==========================================
+            
             // VALIDAR NOTA GERAL
-            // ==========================================
-
+            
             if (nota < 1 || nota > 10)
             {
                 return BadRequest(
@@ -93,9 +86,7 @@ namespace AvaliaMais.Controllers
             }
 
 
-            // ==========================================
             // VALIDAR COMENTÁRIO
-            // ==========================================
 
             if (comentario != null && comentario.Length > 100)
             {
@@ -108,9 +99,7 @@ namespace AvaliaMais.Controllers
             var setores = new List<Avaliacao_Setor>();
 
 
-            // ==========================================
             // LER SETORES
-            // ==========================================
 
             foreach (var item in setoresJson.EnumerateArray())
             {
@@ -138,9 +127,7 @@ namespace AvaliaMais.Controllers
                 }
 
 
-                // ==========================================
                 // NOTA DO SETOR
-                // ==========================================
 
                 if (!item.TryGetProperty(
                     "nota",
@@ -162,9 +149,7 @@ namespace AvaliaMais.Controllers
                 }
 
 
-                // ==========================================
                 // VERIFICAR SETOR
-                // ==========================================
 
                 var setorBanco = _context.Setores
                     .FirstOrDefault(s =>
@@ -187,9 +172,7 @@ namespace AvaliaMais.Controllers
             }
 
 
-            // ==========================================
             // NÃO PERMITIR SETOR REPETIDO
-            // ==========================================
 
             var idsSetores = setores
                 .Select(s => s.Fk_Setores_Id)
@@ -203,9 +186,7 @@ namespace AvaliaMais.Controllers
             }
 
 
-            // ==========================================
             // CRIAR AVALIAÇÃO GERAL
-            // ==========================================
 
             var avaliacao = new Avaliacao
             {
@@ -219,9 +200,7 @@ namespace AvaliaMais.Controllers
             _context.SaveChanges();
 
 
-            // ==========================================
             // SALVAR AVALIAÇÕES DOS SETORES
-            // ==========================================
 
             foreach (var setor in setores)
             {
@@ -233,9 +212,7 @@ namespace AvaliaMais.Controllers
             _context.SaveChanges();
 
 
-            // ==========================================
             // RETORNO
-            // ==========================================
 
             return Ok(new
             {
@@ -245,9 +222,7 @@ namespace AvaliaMais.Controllers
         }
 
 
-        // ==========================================
         // RESUMO DO DASHBOARD
-        // ==========================================
 
         [HttpGet("resumo")]
         public IActionResult Resumo()
@@ -288,9 +263,7 @@ namespace AvaliaMais.Controllers
         }
 
 
-        // ==========================================
         // DESEMPENHO DOS SETORES
-        // ==========================================
 
         [HttpGet("desempenho-setores")]
         public IActionResult DesempenhoSetores()
@@ -337,9 +310,7 @@ namespace AvaliaMais.Controllers
         }
 
 
-        // ==========================================
         // AVALIAÇÕES RECENTES
-        // ==========================================
 
         [HttpGet("recentes")]
         public IActionResult AvaliacoesRecentes()
@@ -351,6 +322,46 @@ namespace AvaliaMais.Controllers
 
 
             return Ok(avaliacoes);
+        }
+
+        // LISTAR AVALIAÇÕES
+
+        [HttpGet("avaliacoes")]
+        public IActionResult ListarAvaliacoes()
+        {
+            var avaliacoes = _context.Avaliacoes
+                .OrderByDescending(a => a.Data_Hora)
+                .ToList();
+
+            var resultado = new List<object>();
+
+            foreach (var avaliacao in avaliacoes)
+            {
+                var setores = _context.Avaliacoes_Setor
+                    .Where(a => a.Fk_Avaliacoes_Id == avaliacao.Id)
+                    .ToList();
+
+                foreach (var avaliacaoSetor in setores)
+                {
+                    var setor = _context.Setores
+                        .FirstOrDefault(s => s.Id == avaliacaoSetor.Fk_Setores_Id);
+
+                    if (setor != null)
+                    {
+                        resultado.Add(new
+                        {
+                            id = avaliacao.Id,
+                            setor = setor.Nome,
+                            nota = avaliacaoSetor.Nota,
+                            notaGeral = avaliacao.Nota,
+                            comentario = avaliacao.Comentario,
+                            dataHora = avaliacao.Data_Hora
+                        });
+                    }
+                }
+            }
+
+            return Ok(resultado);
         }
     }
 }

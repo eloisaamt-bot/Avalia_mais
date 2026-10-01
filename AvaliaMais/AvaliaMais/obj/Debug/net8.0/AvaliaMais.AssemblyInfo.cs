@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvaliaMais")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+104520da1951ef6550ce7b14a9817c1c4b53c6df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d2f118cb992a45948f63f8ceec1168255bb78dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvaliaMais")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvaliaMais")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

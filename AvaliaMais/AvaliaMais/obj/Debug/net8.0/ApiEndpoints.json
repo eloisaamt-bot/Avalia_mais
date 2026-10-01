@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "ListarAvaliacoes",
+    "RelativePath": "Avaliacao/avaliacoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
     "Method": "DesempenhoSetores",
     "RelativePath": "Avaliacao/desempenho-setores",
     "HttpMethod": "GET",

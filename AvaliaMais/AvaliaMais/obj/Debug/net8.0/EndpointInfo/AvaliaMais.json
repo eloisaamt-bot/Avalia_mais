@@ -78,6 +78,18 @@
         }
       }
     },
+    "/Avaliacao/avaliacoes": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Setor": {
       "get": {
         "tags": [

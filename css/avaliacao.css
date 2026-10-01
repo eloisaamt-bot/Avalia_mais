@@ -1,0 +1,946 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #eef3fb;
+
+    color: #17336f;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   PÁGINA
+========================================== */
+
+.pagina {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   MENU SUPERIOR
+========================================== */
+
+.menu-superior {
+
+    width: 100%;
+
+    min-height: 72px;
+
+    background-color: #1f3368;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 32px;
+
+    box-shadow:
+        0 3px 12px rgba(31, 51, 104, 0.15);
+
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo-icone {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background-color: #f9ad18;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 4px 10px rgba(249, 173, 24, 0.25);
+}
+
+
+.logo-texto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+}
+
+
+.logo-texto strong {
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.logo-texto span {
+
+    font-size: 12px;
+
+    margin-top: 3px;
+
+    color: #cbd6eb;
+}
+
+
+/* ==========================================
+   NAVEGAÇÃO
+========================================== */
+
+.navegacao {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.menu-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    color: #d5def0;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.menu-item:hover {
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: white;
+}
+
+
+.menu-item.ativo {
+
+    background-color: rgba(249, 173, 24, 0.15);
+
+    color: #f9ad18;
+}
+
+
+.menu-item .icone {
+
+    font-size: 15px;
+}
+
+
+.botao-sair:hover {
+
+    color: #ffb8b8;
+
+    background-color: rgba(255, 80, 80, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.conteudo {
+
+    flex: 1;
+
+    width: 100%;
+}
+
+
+/* ==========================================
+   TOPO
+========================================== */
+
+.topo {
+
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background-color: #f7f9fd;
+
+    border-bottom: 1px solid #e2e8f3;
+}
+
+
+.usuario-topo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #61779f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.ponto {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: #37b879;
+}
+
+
+/* ==========================================
+   ÁREA PRINCIPAL
+========================================== */
+
+.area-principal {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 35px 32px 50px;
+}
+
+
+/* ==========================================
+   CABEÇALHO DA PÁGINA
+========================================== */
+
+.cabecalho-pagina {
+
+    margin-bottom: 24px;
+}
+
+
+.cabecalho-pagina h1 {
+
+    color: #17336f;
+
+    font-size: 28px;
+
+    margin-bottom: 6px;
+}
+
+
+.cabecalho-pagina p {
+
+    color: #8193b5;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   FILTROS
+========================================== */
+
+.filtros-avaliacao {
+
+    width: 100%;
+
+    min-height: 72px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 4px 15px rgba(31, 51, 104, 0.06);
+}
+
+
+.filtro-grupo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.filtro-grupo label {
+
+    color: #526b96;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.filtro-grupo select {
+
+    min-width: 145px;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d6dfed;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    color: #17336f;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.filtro-grupo select:focus {
+
+    border-color: #f9ad18;
+
+    box-shadow:
+        0 0 0 3px rgba(249, 173, 24, 0.10);
+}
+
+
+/* ==========================================
+   ORDENAÇÃO
+========================================== */
+
+.ordenacao {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.ordenacao span {
+
+    color: #526b96;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-right: 5px;
+}
+
+
+.botao-ordenacao {
+
+    height: 38px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d7e0ee;
+
+    background-color: white;
+
+    color: #63799f;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.botao-ordenacao:first-of-type {
+
+    border-radius: 8px 0 0 8px;
+}
+
+
+.botao-ordenacao:last-of-type {
+
+    border-radius: 0 8px 8px 0;
+}
+
+
+.botao-ordenacao:hover {
+
+    background-color: #f4f7fc;
+}
+
+
+.botao-ordenacao.ativo {
+
+    background-color: #1f3368;
+
+    color: white;
+
+    border-color: #1f3368;
+}
+
+
+/* ==========================================
+   LISTA DE AVALIAÇÕES
+========================================== */
+
+.lista-avaliacoes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ==========================================
+   CARD DA AVALIAÇÃO
+========================================== */
+
+.card-avaliacao {
+
+    width: 100%;
+
+    min-height: 92px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    box-shadow:
+        0 4px 15px rgba(31, 51, 104, 0.05);
+
+    transition: 0.2s;
+
+    border: 1px solid transparent;
+}
+
+
+.card-avaliacao:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #e1e8f3;
+
+    box-shadow:
+        0 7px 20px rgba(31, 51, 104, 0.08);
+}
+
+
+/* ==========================================
+   ÍCONE DO SETOR
+========================================== */
+
+.icone-avaliacao {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    background-color: #edf3ff;
+
+    color: #3158a0;
+}
+
+
+/* cores alternadas */
+
+.card-avaliacao:nth-child(4n + 1)
+.icone-avaliacao {
+
+    background-color: #edf3ff;
+
+    color: #3158a0;
+}
+
+
+.card-avaliacao:nth-child(4n + 2)
+.icone-avaliacao {
+
+    background-color: #e9f8f2;
+
+    color: #269a70;
+}
+
+
+.card-avaliacao:nth-child(4n + 3)
+.icone-avaliacao {
+
+    background-color: #fff5e7;
+
+    color: #d88b18;
+}
+
+
+.card-avaliacao:nth-child(4n + 4)
+.icone-avaliacao {
+
+    background-color: #f2edff;
+
+    color: #7454bd;
+}
+
+
+/* ==========================================
+   CONTEÚDO DA AVALIAÇÃO
+========================================== */
+
+.info-avaliacao {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.linha-principal {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 5px;
+}
+
+
+.nome-setor {
+
+    color: #17336f;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.estrelas {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    color: #f39b17;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+.estrela-vazia {
+
+    color: #d8dfeb;
+}
+
+
+.comentario {
+
+    color: #8798b6;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 650px;
+}
+
+
+/* ==========================================
+   LADO DIREITO
+========================================== */
+
+.dados-avaliacao {
+
+    min-width: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 6px;
+}
+
+
+/* ==========================================
+   CLASSIFICAÇÃO
+========================================== */
+
+.classificacao {
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.classificacao.excelente {
+
+    background-color: #35b982;
+
+    color: white;
+}
+
+
+.classificacao.bom {
+
+    background-color: #4e7ff0;
+
+    color: white;
+}
+
+
+.classificacao.regular {
+
+    background-color: #f0a21b;
+
+    color: white;
+}
+
+
+.classificacao.ruim {
+
+    background-color: #e45b63;
+
+    color: white;
+}
+
+
+/* ==========================================
+   DATA
+========================================== */
+
+.data-avaliacao {
+
+    color: #8294b5;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   NENHUMA AVALIAÇÃO
+========================================== */
+
+.sem-avaliacoes {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    color: #8193b5;
+
+    box-shadow:
+        0 4px 15px rgba(31, 51, 104, 0.05);
+}
+
+
+.sem-avaliacoes strong {
+
+    display: block;
+
+    color: #17336f;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 900px) {
+
+    .filtros-avaliacao {
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .ordenacao {
+
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .menu-superior {
+
+        padding: 12px 18px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .navegacao {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .menu-item {
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .topo {
+
+        padding: 0 20px;
+    }
+
+
+    .area-principal {
+
+        padding: 25px 15px 40px;
+    }
+
+
+    .filtros-avaliacao {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .filtro-grupo {
+
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+
+    .filtro-grupo select {
+
+        flex: 1;
+    }
+
+
+    .ordenacao {
+
+        justify-content: flex-end;
+    }
+
+
+    .card-avaliacao {
+
+        align-items: flex-start;
+
+        padding: 16px;
+    }
+
+
+    .dados-avaliacao {
+
+        min-width: 75px;
+    }
+
+
+    .comentario {
+
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo-texto span {
+
+        display: none;
+    }
+
+
+    .menu-item span:not(.icone) {
+
+        display: none;
+    }
+
+
+    .card-avaliacao {
+
+        gap: 10px;
+    }
+
+
+    .icone-avaliacao {
+
+        width: 38px;
+
+        height: 38px;
+
+        min-width: 38px;
+    }
+
+
+    .nome-setor {
+
+        font-size: 14px;
+    }
+
+
+    .estrelas {
+
+        font-size: 12px;
+    }
+
+
+    .comentario {
+
+        font-size: 12px;
+    }
+
+
+    .dados-avaliacao {
+
+        min-width: 70px;
+    }
+
+}

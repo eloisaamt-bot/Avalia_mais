@@ -1,157 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+
+    <title>Cadastro | Avalia+</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="../css/cad.css">
+
 </head>
 
 <body>
 
-    <body>
+    <div class="pagina">
 
-        <div class="pagina">
+        <!-- PAINEL ESQUERDO -->
+        <aside class="painel-esquerdo">
+
+            <a href="telaLog.html" class="voltar">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Voltar para o login
+
+            </a>
 
 
-            <aside class="painel-esquerdo">
+            <div class="logo-marca">
 
-                <a href="telaLog.html" class="voltar">
-                    ← Voltar para o login
-                </a>
+                
 
-                <img src="../img/logo branca.png" class="logo" alt="Logo Avalia+">
+                <div class="logo-texto">
 
-                <h1>Área do Gestor</h1>
+                    <strong>Avalia+</strong>
+
+                    <span>Painel de Gestão</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="conteudo-esquerdo">
+
+                <span class="tag-gestor">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Novo gestor
+
+                </span>
+
+
+                <h1>Criar conta</h1>
+
 
                 <p class="descricao">
-                    Crie sua conta para acessar o painel
-                    de gestão e acompanhar as avaliações
-                    dos seus clientes.
+
+                    Crie sua conta para acessar o painel de gestão
+                    e acompanhar as avaliações dos seus clientes.
+
                 </p>
 
-                <div class="beneficios">
+            </div>
 
-                    <div class="beneficio">
-                        <p>Visualize os resultados das avaliações</p>
+
+            <div class="beneficios">
+
+                <div class="beneficio">
+
+                    <div class="icone-beneficio">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
                     </div>
 
-                    <div class="beneficio">
-                        <p>Cadastre setores e suas perguntas</p>
-                    </div>
+                    <div>
 
-                    <div class="beneficio">
-                        <p>Acompanhe a satisfação dos clientes</p>
+                        <strong>Resultados</strong>
+
+                        <p>Visualize os resultados das avaliações.</p>
+
                     </div>
 
                 </div>
 
-            </aside>
 
+                <div class="beneficio">
 
-            <!-- ÁREA DIREITA -->
-            <main class="area-cadastro">
+                    <div class="icone-beneficio">
 
-                <div class="cadastro-container">
-
-                    <h2>Criar conta</h2>
-
-                    <p class="subtitulo">
-                        Cadastre-se para acessar o painel de gestão
-                    </p>
-
-                    <!-- ABAS -->
-                    <div class="abas">
-
-                        <button type="button" class="aba " id="abaEntrar">
-                            Login
-                        </button>
-
-                        <button type="button" class="aba ativa" id="abaCadastrar">
-                            Cadastrar
-                        </button>
+                        <i class="fa-solid fa-layer-group"></i>
 
                     </div>
 
-                    <!-- FORMULÁRIO -->
-                    <form id="formCadastro">
+                    <div>
 
-                        <!-- NOME -->
-                        <div class="campo">
+                        <strong>Setores</strong>
 
-                            <label for="nome">
-                                Nome
-                            </label>
+                        <p>Cadastre setores e suas perguntas.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="beneficio">
+
+                    <div class="icone-beneficio">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Satisfação</strong>
+
+                        <p>Acompanhe a satisfação dos clientes.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ÁREA DE CADASTRO -->
+        <main class="area-cadastro">
+
+            <div class="cadastro-container">
+
+
+                <div class="cabecalho-cadastro">
+
+                    <span class="icone-titulo"> </span>
+
+
+                    <div>
+
+                        <h2>Criar conta</h2>
+
+                        <p class="subtitulo">
+
+                            Cadastre-se para acessar o painel de gestão
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ABAS -->
+                <div class="abas">
+
+                    <button type="button" class="aba" id="abaEntrar">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </button>
+
+
+                    <button type="button" class="aba ativa" id="abaCadastrar">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Cadastrar
+
+                    </button>
+
+                </div>
+
+
+                <!-- FORMULÁRIO -->
+                <form id="formCadastro">
+
+
+                    <div class="campo">
+
+                        <label for="nome">
+
+
+
+                            Nome
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
 
                             <input type="text" id="nome" placeholder="Digite seu nome" required>
 
                         </div>
 
+                    </div>
 
-                        <!-- E-MAIL -->
-                        <div class="campo">
 
-                            <label for="email">
-                                E-mail
-                            </label>
+                    <div class="campo">
+
+                        <label for="email">
+
+
+
+                            E-mail
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
 
                             <input type="email" id="email" placeholder="Digite seu e-mail" required>
 
                         </div>
 
+                    </div>
 
-                        <!-- SENHA -->
-                        <div class="campo">
 
-                            <label for="senha">
-                                Senha
-                            </label>
+                    <div class="campo">
+
+                        <label for="senha">
+
+
+                            Senha
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
 
                             <input type="password" id="senha" placeholder="Digite sua senha" required>
 
                         </div>
 
+                    </div>
 
-                        <!-- CONFIRMAR SENHA -->
-                        <div class="campo">
 
-                            <label for="confirmarSenha">
-                                Confirmar senha
-                            </label>
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+
+
+                            Confirmar senha
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
 
                             <input type="password" id="confirmarSenha" placeholder="Digite a senha novamente" required>
 
                         </div>
 
-
-                        <!-- BOTÃO -->
-                        <button type="submit" class="botao-cadastro">
-                            Criar conta
-                        </button>
-
-                    </form>
+                    </div>
 
 
-                    <!-- VOLTAR PARA LOGIN -->
-                    <p class="login-link">
+                    <button type="submit" class="botao-cadastro">
 
-                        Já possui uma conta?
+                        <span>Criar conta</span>
 
-                        <a href="../html/telaLog.html">
 
-                            Entrar
-                        </a>
 
-                    </p>
+                    </button>
+
+
+                </form>
+
+
+                <p class="login-link">
+
+                    Já possui uma conta?
+
+                    <a href="../html/telaLog.html">
+                        Entrar
+                    </a>
+
+                </p>
+
+
+                <div class="aviso-cadastro">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Seus dados são utilizados apenas para acesso ao sistema.
+                    </span>
 
                 </div>
 
-            </main>
+            </div>
 
-        </div>
+        </main>
 
-        <script src="../js/cad.js"></script>
-    </body>
+    </div>
+
+
+    <script src="../js/cad.js"></script>
+
+</body>
 
 </html>

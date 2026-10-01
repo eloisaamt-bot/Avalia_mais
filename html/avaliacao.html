@@ -2,17 +2,280 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Avalia+ | Avaliação</title>
+    <title>Avaliações</title>
 
     <link rel="stylesheet" href="../css/avaliacao.css">
+
 </head>
+
 
 <body>
 
-    
+    <div class="pagina">
+
+        <!-- ===================================== -->
+        <!-- MENU SUPERIOR -->
+        <!-- ===================================== -->
+
+        <header class="menu-superior">
+
+            <!-- LOGO -->
+
+            <div class="logo-area">
+
+                <div class="logo-icone">
+                    ★
+                </div>
+
+                <div class="logo-texto">
+
+                    <strong>Avalia+</strong>
+
+                    <span>Painel de Gestão</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav class="navegacao">
+
+                <a
+                    href="visaoGeral.html"
+                    class="menu-item"
+                >
+
+                    <span class="icone">
+                        ▦
+                    </span>
+
+                    <span>
+                        Visão Geral
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="setor.html"
+                    class="menu-item"
+                >
+
+                    <span class="icone">
+                        ▣
+                    </span>
+
+                    <span>
+                        Setores
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="avaliacao.html"
+                    class="menu-item ativo"
+                >
+
+                    <span class="icone">
+                        ★
+                    </span>
+
+                    <span>
+                        Avaliações
+                    </span>
+
+                </a>
+
+
+                <button
+                    class="menu-item botao-sair"
+                    onclick="sair()"
+                    type="button"
+                >
+
+                    <span class="icone">
+                        ↪
+                    </span>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </nav>
+
+        </header>
+
+
+        <!-- ===================================== -->
+        <!-- CONTEÚDO -->
+        <!-- ===================================== -->
+
+        <main class="conteudo">
+
+            <!-- TOPO -->
+
+            <header class="topo">
+
+                <div></div>
+
+                <div class="usuario-topo">
+
+                    <span class="ponto"></span>
+
+                    Gestor
+
+                </div>
+
+            </header>
+
+
+            <!-- ===================================== -->
+            <!-- ÁREA DE AVALIAÇÕES -->
+            <!-- ===================================== -->
+
+            <section class="area-principal">
+
+
+                <!-- CABEÇALHO -->
+
+                <div class="cabecalho-pagina">
+
+                    <div>
+
+                        <h1>
+                            Avaliações
+                        </h1>
+
+                        <p id="quantidadeAvaliacoes">
+                            Carregando avaliações...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- FILTROS -->
+                <!-- ===================================== -->
+
+                <div class="filtros-avaliacao">
+
+
+                    <!-- SETOR -->
+
+                    <div class="filtro-grupo">
+
+                        <label for="filtroSetor">
+                            Setor:
+                        </label>
+
+                        <select id="filtroSetor">
+
+                            <option value="todos">
+                                Todos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- NOTA -->
+
+                    <div class="filtro-grupo">
+
+                        <label for="filtroNota">
+                            Nota:
+                        </label>
+
+                        <select id="filtroNota">
+
+                            <option value="todas">
+                                Todas
+                            </option>
+
+                            <option value="5">
+                                5 estrelas
+                            </option>
+
+                            <option value="4">
+                                4 estrelas
+                            </option>
+
+                            <option value="3">
+                                3 estrelas
+                            </option>
+
+                            <option value="2">
+                                2 estrelas
+                            </option>
+
+                            <option value="1">
+                                1 estrela
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ORDENAÇÃO -->
+
+                    <div class="ordenacao">
+
+                        <span>
+                            Ordenar:
+                        </span>
+
+                        <button
+                            type="button"
+                            id="ordenarData"
+                            class="botao-ordenacao ativo"
+                        >
+                            Data
+                        </button>
+
+                        <button
+                            type="button"
+                            id="ordenarNota"
+                            class="botao-ordenacao"
+                        >
+                            Nota
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- LISTA -->
+                <!-- ===================================== -->
+
+                <div
+                    id="listaAvaliacoes"
+                    class="lista-avaliacoes"
+                >
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
 
 
     <script src="../js/avaliacao.js"></script>

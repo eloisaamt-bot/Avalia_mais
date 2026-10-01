@@ -38,11 +38,9 @@ body {
     width: 38%;
     min-width: 360px;
 
-    background: linear-gradient(
-        145deg,
-        #17357c 0%,
-        #234b98 100%
-    );
+    background: linear-gradient(145deg,
+            #17357c 0%,
+            #234b98 100%);
 
     color: white;
 
@@ -111,25 +109,20 @@ body {
    LOGO
 ========================= */
 
-.icone-logo {
-    width: 30px;
-    height: 30px;
+.logoImg {
+
+    width: 250px;
+
+    height: 150px;
+
+    border-radius: 13px;
 
     display: flex;
 
-    align-items: center;
-    justify-content: center;
-
-    background-color: #FFC107;
-
-    color: #123B72;
-
-    border-radius: 12px;
-
-    font-size: 25px;
-
-    margin-bottom: 22px;
 }
+
+
+
 
 
 
@@ -140,6 +133,7 @@ body {
 .conteudo-esquerdo {
     max-width: 420px;
 }
+
 
 .tag-gestor {
     display: inline-flex;
@@ -164,10 +158,10 @@ body {
 }
 
 .painel-esquerdo h1 {
-    color: white;
+    color: rgb(255, 255, 255);
 
     font-size: 34px;
-
+    margin-top: 30%;
     margin-bottom: 16px;
 }
 
@@ -413,7 +407,7 @@ body {
     margin-bottom: 8px;
 }
 
-.campo label > i {
+.campo label>i {
     color: #6485f6;
 
     margin-right: 5px;
@@ -446,7 +440,7 @@ body {
     transition: 0.2s;
 }
 
-.input-wrapper > i {
+.input-wrapper>i {
     color: #9aa9bd;
 
     font-size: 14px;
@@ -594,7 +588,7 @@ body {
         padding: 30px 25px 35px;
     }
 
-    .logo-marca {
+    .logoImg {
         margin-bottom: 30px;
     }
 
