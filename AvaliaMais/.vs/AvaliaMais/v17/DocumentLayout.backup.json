@@ -66,8 +66,7 @@
               "RelativeToolTip": "AvaliaMais\\Data\\AvaliaMaisContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T13:35:23.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T13:35:23.579Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "AvaliaMais\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T12:00:08.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T12:00:08.966Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "AvaliaMais\\Controllers\\SetorController.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAcwAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T11:35:59.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T11:35:59.732Z"
             },
             {
               "$type": "Document",
@@ -101,9 +98,9 @@
               "Title": "AvaliacaoController.cs",
               "DocumentMoniker": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs",
               "RelativeDocumentMoniker": "AvaliaMais\\Controllers\\AvaliacaoController.cs",
-              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs",
-              "RelativeToolTip": "AvaliaMais\\Controllers\\AvaliacaoController.cs",
-              "ViewState": "AgIAAEIBAAAAAAAAAAAowEkBAAAvAAAAAAAAAA==",
+              "ToolTip": "E:\\eloisa\\eloisa trabalho\\Avalia\u002B\\Avalia_mais\\AvaliaMais\\AvaliaMais\\Controllers\\AvaliacaoController.cs*",
+              "RelativeToolTip": "AvaliaMais\\Controllers\\AvaliacaoController.cs*",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAkwPgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T12:59:11.661Z",
               "EditorCaption": ""
@@ -118,8 +115,7 @@
               "RelativeToolTip": "AvaliaMais\\Models\\Setor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T11:46:10.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T11:46:10.939Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "AvaliaMais\\Models\\Avaliacao_Setor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T13:59:21.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T13:59:21.143Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "AvaliaMais\\Models\\Avaliacao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T12:53:19.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T12:53:19.838Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "AvaliaMais\\Controllers\\UsuarioController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T11:00:18.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T11:00:18.676Z"
             },
             {
               "$type": "Document",

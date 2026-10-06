@@ -222,30 +222,43 @@ namespace AvaliaMais.Controllers
         }
 
 
+
         // RESUMO DO DASHBOARD
 
         [HttpGet("resumo")]
-        public IActionResult Resumo()
+        public IActionResult Resumo(int? dias)
         {
-            var totalAvaliacoes =
-                _context.Avaliacoes.Count();
+            var avaliacoesQuery = _context.Avaliacoes
+                .AsQueryable();
 
+            // FILTRO POR PERÍODO
+            if (dias.HasValue)
+            {
+                var dataLimite = DateTime.Now.AddDays(-dias.Value);
 
-            var mediaGeral = _context.Avaliacoes
+                avaliacoesQuery = avaliacoesQuery
+                    .Where(a => a.Data_Hora >= dataLimite);
+            }
+
+            var totalAvaliacoes = avaliacoesQuery.Count();
+
+            var mediaGeral = avaliacoesQuery
                 .Select(a => (double?)a.Nota)
                 .Average() ?? 0;
 
+            var idsAvaliacoes = avaliacoesQuery
+                .Select(a => a.Id)
+                .ToList();
 
             var setoresAvaliados = _context.Avaliacoes_Setor
+                .Where(a => idsAvaliacoes.Contains(a.Fk_Avaliacoes_Id))
                 .Select(a => a.Fk_Setores_Id)
                 .Distinct()
                 .Count();
 
-
-            var totalComentarios = _context.Avaliacoes
+            var totalComentarios = avaliacoesQuery
                 .Count(a =>
                     !string.IsNullOrWhiteSpace(a.Comentario));
-
 
             return Ok(new
             {
@@ -265,49 +278,61 @@ namespace AvaliaMais.Controllers
 
         // DESEMPENHO DOS SETORES
 
-        [HttpGet("desempenho-setores")]
-        public IActionResult DesempenhoSetores()
+       [HttpGet("desempenho-setores")]
+public IActionResult DesempenhoSetores(int? dias)
+{
+    var avaliacoesQuery = _context.Avaliacoes
+        .AsQueryable();
+
+    // FILTRO POR PERÍODO
+    if (dias.HasValue)
+    {
+        var dataLimite = DateTime.Now.AddDays(-dias.Value);
+
+        avaliacoesQuery = avaliacoesQuery
+            .Where(a => a.Data_Hora >= dataLimite);
+    }
+
+    var idsAvaliacoes = avaliacoesQuery
+        .Select(a => a.Id)
+        .ToList();
+
+    var setores = _context.Setores
+        .Where(s => s.Ativo)
+        .ToList();
+
+    var resultado = new List<object>();
+
+    foreach (var setor in setores)
+    {
+        var avaliacoes = _context.Avaliacoes_Setor
+            .Where(a =>
+                a.Fk_Setores_Id == setor.Id &&
+                idsAvaliacoes.Contains(a.Fk_Avaliacoes_Id))
+            .ToList();
+
+        var media = avaliacoes
+            .Select(a => (double?)a.Nota)
+            .Average() ?? 0;
+
+        resultado.Add(new
         {
-            var setores = _context.Setores
-                .Where(s => s.Ativo)
-                .ToList();
+            id = setor.Id,
 
+            nome = setor.Nome,
 
-            var resultado = new List<object>();
+            media = Math.Round(
+                media,
+                1
+            ),
 
+            quantidadeAvaliacoes =
+                avaliacoes.Count
+        });
+    }
 
-            foreach (var setor in setores)
-            {
-                var avaliacoes = _context.Avaliacoes_Setor
-                    .Where(a =>
-                        a.Fk_Setores_Id == setor.Id)
-                    .ToList();
-
-
-                var media = avaliacoes
-                    .Select(a => (double?)a.Nota)
-                    .Average() ?? 0;
-
-
-                resultado.Add(new
-                {
-                    id = setor.Id,
-
-                    nome = setor.Nome,
-
-                    media = Math.Round(
-                        media,
-                        1
-                    ),
-
-                    quantidadeAvaliacoes =
-                        avaliacoes.Count
-                });
-            }
-
-
-            return Ok(resultado);
-        }
+    return Ok(resultado);
+}
 
 
         // AVALIAÇÕES RECENTES
@@ -363,5 +388,6 @@ namespace AvaliaMais.Controllers
 
             return Ok(resultado);
         }
+
     }
 }

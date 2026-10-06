@@ -2,7 +2,7 @@
 // CONFIGURAÇÃO
 // ==========================================
 
-const API = "https://localhost:7254/Avaliacao/Avaliacoes";
+const API = "https://localhost:7254/avaliacao/avaliacoes";
 
 let avaliacoes = [];
 
@@ -60,10 +60,7 @@ async function carregarAvaliacoes() {
 
     try {
 
-        const resposta = await fetch(
-            `${API}/Avaliacao/lista`
-        );
-
+        const resposta = await fetch(API);
 
         if (!resposta.ok) {
 
@@ -72,9 +69,7 @@ async function carregarAvaliacoes() {
             );
         }
 
-
         avaliacoes = await resposta.json();
-
 
         carregarFiltroSetores();
 
@@ -83,7 +78,6 @@ async function carregarAvaliacoes() {
         );
 
         aplicarFiltros();
-
 
     } catch (erro) {
 
@@ -159,32 +153,23 @@ function carregarFiltroSetores() {
 function aplicarFiltros() {
 
     const setorSelecionado =
-        document.getElementById(
-            "filtroSetor"
-        ).value;
-
+        document.getElementById("filtroSetor").value;
 
     const notaSelecionada =
-        document.getElementById(
-            "filtroNota"
-        ).value;
+        document.getElementById("filtroNota").value;
 
-
-    let resultado =
-        [...avaliacoes];
+    let resultado = [...avaliacoes];
 
 
     // FILTRO SETOR
 
     if (setorSelecionado !== "todos") {
 
-        resultado =
-            resultado.filter(function (avaliacao) {
+        resultado = resultado.filter(function (avaliacao) {
 
-                return avaliacao.setor ===
-                    setorSelecionado;
+            return avaliacao.setor === setorSelecionado;
 
-            });
+        });
 
     }
 
@@ -193,16 +178,13 @@ function aplicarFiltros() {
 
     if (notaSelecionada !== "todas") {
 
-        const nota =
-            Number(notaSelecionada);
+        const nota = Number(notaSelecionada);
 
+        resultado = resultado.filter(function (avaliacao) {
 
-        resultado =
-            resultado.filter(function (avaliacao) {
+            return avaliacao.nota === nota;
 
-                return avaliacao.notaSetor === nota;
-
-            });
+        });
 
     }
 
@@ -213,8 +195,8 @@ function aplicarFiltros() {
 
         resultado.sort(function (a, b) {
 
-            return new Date(b.dataHora)
-                - new Date(a.dataHora);
+            return new Date(b.dataHora) -
+                   new Date(a.dataHora);
 
         });
 
@@ -225,18 +207,14 @@ function aplicarFiltros() {
 
         resultado.sort(function (a, b) {
 
-            return b.notaSetor
-                - a.notaSetor;
+            return b.nota - a.nota;
 
         });
 
     }
 
 
-    atualizarContador(
-        resultado.length
-    );
-
+    atualizarContador(resultado.length);
 
     mostrarAvaliacoes(resultado);
 }
@@ -288,17 +266,15 @@ function mostrarAvaliacoes(lista) {
         );
 
 
-        const classificacao =
-            obterClassificacao(
-                avaliacao.notaSetor
-            );
+     const classificacao =
+    obterClassificacao(
+        avaliacao.nota
+    );
 
-
-        const estrelas =
-            criarEstrelas(
-                avaliacao.notaSetor
-            );
-
+const estrelas =
+    criarEstrelas(
+        avaliacao.nota
+    );
 
         const data =
             formatarData(
@@ -488,18 +464,23 @@ function formatarData(data) {
 
 function atualizarContador(quantidade) {
 
-    const contador =
-        document.getElementById(
-            "contadorAvaliacoes"
-        );
+    const contador = document.getElementById(
+        "quantidadeAvaliacoes"
+    );
 
+    if (!contador) {
+        console.warn(
+            "Elemento #quantidadeAvaliacoes não encontrado no HTML."
+        );
+        return;
+    }
 
     contador.textContent =
-        `${quantidade} ${quantidade === 1
-            ? "avaliação"
-            : "avaliações"
+        `${quantidade} ${
+            quantidade === 1
+                ? "avaliação encontrada"
+                : "avaliações encontradas"
         }`;
-
 }
 
 
