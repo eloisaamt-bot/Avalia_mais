@@ -5,6 +5,104 @@ let idSetorEditando = null;
 let filtroAtual = "todos";
 
 
+function obterIconeSetor(nome, id) {
+    const nomeSetor = nome.toLowerCase();
+
+    // Ícones específicos
+    if (nomeSetor.includes("atendimento")) {
+        return "fa-handshake";
+    }
+
+    if (nomeSetor.includes("caixa")) {
+        return "fa-cash-register";
+    }
+
+    if (nomeSetor.includes("ambiente")) {
+        return "fa-store";
+    }
+
+    if (nomeSetor.includes("produto")) {
+        return "fa-box";
+    }
+
+    if (nomeSetor.includes("entrega") || nomeSetor.includes("delivery")) {
+        return "fa-truck";
+    }
+
+    if (nomeSetor.includes("limpeza")) {
+        return "fa-broom";
+    }
+
+    if (nomeSetor.includes("estoque")) {
+        return "fa-warehouse";
+    }
+
+    if (nomeSetor.includes("vendas")) {
+        return "fa-cart-shopping";
+    }
+
+    if (nomeSetor.includes("financeiro")) {
+        return "fa-money-bill-wave";
+    }
+
+    if (nomeSetor.includes("recepção") || nomeSetor.includes("recepcao")) {
+        return "fa-bell-concierge";
+    }
+
+    if (nomeSetor.includes("cozinha")) {
+        return "fa-utensils";
+    }
+
+    if (nomeSetor.includes("qualidade")) {
+        return "fa-star";
+    }
+
+    if (nomeSetor.includes("produção") || nomeSetor.includes("producao")) {
+        return "fa-gears";
+    }
+
+    if (nomeSetor.includes("logística") || nomeSetor.includes("logistica")) {
+        return "fa-truck-fast";
+    }
+
+    if (
+        nomeSetor.includes("rh") ||
+        nomeSetor.includes("recursos humanos")
+    ) {
+        return "fa-users";
+    }
+
+    // Ícones para setores novos
+    const icones = [
+        "fa-chart-column",
+        "fa-lightbulb",
+        "fa-bullseye",
+        "fa-screwdriver-wrench",
+        "fa-clipboard",
+        "fa-flag",
+        "fa-gears",
+        "fa-layer-group",
+        "fa-circle-check",
+        "fa-briefcase"
+    ];
+
+    return icones[(id - 1) % icones.length];
+}
+
+
+function obterCorSetor(id) {
+
+    /*
+     * Gera uma cor diferente para cada setor.
+     * O cálculo usa o ID para distribuir as cores.
+     */
+
+    const matiz = ((id - 1) * 47) % 360;
+
+    return `hsl(${matiz}, 75%, 55%)`;
+}
+
+
 // =====================================================
 // LISTAR SETORES
 // =====================================================
@@ -187,12 +285,35 @@ function mostrarSetores() {
         }
 
 
+        // =================================================
+        // ÍCONE E COR DO SETOR
+        // =================================================
+
+        const icone = obterIconeSetor(
+            setor.nome,
+            setor.id
+        );
+
+        const cor = obterCorSetor(
+            setor.id
+        );
+
+
+        // Cor da borda superior do card
+
+        card.style.borderTopColor = cor;
+
+
         card.innerHTML = `
 
             <div class="card-topo">
 
-                <div class="icone-setor">
-                    🏢
+                <div
+                    class="icone-setor"
+                    style="color: ${cor};">
+
+                    <i class="fa-solid ${icone}"></i>
+
                 </div>
 
                 <div class="info-setor">
@@ -214,7 +335,9 @@ function mostrarSetores() {
                     class="acao"
                     type="button"
                     onclick="editarSetor(${setor.id})">
+
                     Editar
+
                 </button>
 
                 ${botaoStatus}
@@ -264,7 +387,8 @@ function filtrarSetores(filtro, botao) {
 
 function atualizarQuantidade() {
 
-    const quantidade = document.getElementById("quantidadeSetores");
+    const quantidade =
+        document.getElementById("quantidadeSetores");
 
     if (quantidade == null) {
         return;
@@ -273,7 +397,8 @@ function atualizarQuantidade() {
 
     if (setores.length === 0) {
 
-        quantidade.textContent = "Nenhum setor cadastrado.";
+        quantidade.textContent =
+            "Nenhum setor cadastrado.";
 
         return;
     }
@@ -281,7 +406,8 @@ function atualizarQuantidade() {
 
     if (setores.length === 1) {
 
-        quantidade.textContent = "1 setor cadastrado.";
+        quantidade.textContent =
+            "1 setor cadastrado.";
 
         return;
     }
@@ -301,11 +427,14 @@ function abrirModal() {
     idSetorEditando = null;
 
 
-    const modal = document.getElementById("modal");
+    const modal =
+        document.getElementById("modal");
 
-    const nome = document.getElementById("nomeSetor");
+    const nome =
+        document.getElementById("nomeSetor");
 
-    const pergunta = document.getElementById("perguntaSetor");
+    const pergunta =
+        document.getElementById("perguntaSetor");
 
 
     if (nome != null) {
@@ -321,17 +450,22 @@ function abrirModal() {
 
 
     const titulo =
-        document.querySelector(".modal-cabecalho h2");
+        document.querySelector(
+            ".modal-cabecalho h2"
+        );
 
 
     if (titulo != null) {
 
-        titulo.textContent = "Novo Setor";
+        titulo.textContent =
+            "Novo Setor";
     }
 
 
     const descricao =
-        document.querySelector(".modal-cabecalho p");
+        document.querySelector(
+            ".modal-cabecalho p"
+        );
 
 
     if (descricao != null) {
@@ -342,12 +476,15 @@ function abrirModal() {
 
 
     const botao =
-        document.querySelector(".botao-cadastrar");
+        document.querySelector(
+            ".botao-cadastrar"
+        );
 
 
     if (botao != null) {
 
-        botao.textContent = "Cadastrar setor";
+        botao.textContent =
+            "Cadastrar setor";
     }
 
 
@@ -364,7 +501,8 @@ function abrirModal() {
 
 function fecharModal() {
 
-    const modal = document.getElementById("modal");
+    const modal =
+        document.getElementById("modal");
 
 
     if (modal != null) {
@@ -384,16 +522,24 @@ function fecharModal() {
 function cadastrarSetor() {
 
     const nome =
-        document.getElementById("nomeSetor").value.trim();
+        document
+            .getElementById("nomeSetor")
+            .value
+            .trim();
 
 
     const pergunta =
-        document.getElementById("perguntaSetor").value.trim();
+        document
+            .getElementById("perguntaSetor")
+            .value
+            .trim();
 
 
     if (nome === "") {
 
-        alert("O nome do setor é obrigatório.");
+        alert(
+            "O nome do setor é obrigatório."
+        );
 
         return;
     }
@@ -401,7 +547,9 @@ function cadastrarSetor() {
 
     if (pergunta === "") {
 
-        alert("A pergunta do setor é obrigatória.");
+        alert(
+            "A pergunta do setor é obrigatória."
+        );
 
         return;
     }
@@ -450,11 +598,13 @@ function cadastrarSetor() {
 
         if (!response.ok) {
 
-            return response.text().then(function (mensagem) {
+            return response
+                .text()
+                .then(function (mensagem) {
 
-                throw new Error(mensagem);
+                    throw new Error(mensagem);
 
-            });
+                });
         }
 
 
@@ -463,9 +613,14 @@ function cadastrarSetor() {
 
     .then(function (data) {
 
-        console.log("Setor cadastrado:", data);
+        console.log(
+            "Setor cadastrado:",
+            data
+        );
 
-        alert("Setor cadastrado com sucesso!");
+        alert(
+            "Setor cadastrado com sucesso!"
+        );
 
         fecharModal();
 
@@ -490,16 +645,19 @@ function cadastrarSetor() {
 
 function editarSetor(id) {
 
-    const setor = setores.find(function (s) {
+    const setor =
+        setores.find(function (s) {
 
-        return s.id === id;
+            return s.id === id;
 
-    });
+        });
 
 
     if (setor == null) {
 
-        alert("Setor não encontrado.");
+        alert(
+            "Setor não encontrado."
+        );
 
         return;
     }
@@ -508,26 +666,33 @@ function editarSetor(id) {
     idSetorEditando = id;
 
 
-    document.getElementById("nomeSetor").value =
-        setor.nome;
+    document
+        .getElementById("nomeSetor")
+        .value = setor.nome;
 
 
-    document.getElementById("perguntaSetor").value =
-        setor.pergunta;
+    document
+        .getElementById("perguntaSetor")
+        .value = setor.pergunta;
 
 
     const titulo =
-        document.querySelector(".modal-cabecalho h2");
+        document.querySelector(
+            ".modal-cabecalho h2"
+        );
 
 
     if (titulo != null) {
 
-        titulo.textContent = "Editar Setor";
+        titulo.textContent =
+            "Editar Setor";
     }
 
 
     const descricao =
-        document.querySelector(".modal-cabecalho p");
+        document.querySelector(
+            ".modal-cabecalho p"
+        );
 
 
     if (descricao != null) {
@@ -538,12 +703,15 @@ function editarSetor(id) {
 
 
     const botao =
-        document.querySelector(".botao-cadastrar");
+        document.querySelector(
+            ".botao-cadastrar"
+        );
 
 
     if (botao != null) {
 
-        botao.textContent = "Salvar alterações";
+        botao.textContent =
+            "Salvar alterações";
     }
 
 
@@ -564,28 +732,39 @@ function editarSetor(id) {
 
 function atualizarSetor() {
 
-    const id = idSetorEditando;
+    const id =
+        idSetorEditando;
 
 
     if (id == null) {
 
-        alert("Setor não selecionado.");
+        alert(
+            "Setor não selecionado."
+        );
 
         return;
     }
 
 
     const nome =
-        document.getElementById("nomeSetor").value.trim();
+        document
+            .getElementById("nomeSetor")
+            .value
+            .trim();
 
 
     const pergunta =
-        document.getElementById("perguntaSetor").value.trim();
+        document
+            .getElementById("perguntaSetor")
+            .value
+            .trim();
 
 
     if (nome === "") {
 
-        alert("O nome do setor é obrigatório.");
+        alert(
+            "O nome do setor é obrigatório."
+        );
 
         return;
     }
@@ -593,7 +772,9 @@ function atualizarSetor() {
 
     if (pergunta === "") {
 
-        alert("A pergunta do setor é obrigatória.");
+        alert(
+            "A pergunta do setor é obrigatória."
+        );
 
         return;
     }
@@ -619,11 +800,12 @@ function atualizarSetor() {
     }
 
 
-    const setor = setores.find(function (s) {
+    const setor =
+        setores.find(function (s) {
 
-        return s.id === id;
+            return s.id === id;
 
-    });
+        });
 
 
     let ativo = true;
@@ -660,11 +842,13 @@ function atualizarSetor() {
 
         if (!response.ok) {
 
-            return response.text().then(function (mensagem) {
+            return response
+                .text()
+                .then(function (mensagem) {
 
-                throw new Error(mensagem);
+                    throw new Error(mensagem);
 
-            });
+                });
         }
 
 
@@ -673,9 +857,14 @@ function atualizarSetor() {
 
     .then(function (data) {
 
-        console.log("Setor atualizado:", data);
+        console.log(
+            "Setor atualizado:",
+            data
+        );
 
-        alert("Setor atualizado com sucesso!");
+        alert(
+            "Setor atualizado com sucesso!"
+        );
 
         fecharModal();
 
@@ -700,24 +889,28 @@ function atualizarSetor() {
 
 function excluirSetor(id) {
 
-    const setor = setores.find(function (s) {
+    const setor =
+        setores.find(function (s) {
 
-        return s.id === id;
+            return s.id === id;
 
-    });
+        });
 
 
     if (setor == null) {
 
-        alert("Setor não encontrado.");
+        alert(
+            "Setor não encontrado."
+        );
 
         return;
     }
 
 
-    const confirmar = confirm(
-        `Deseja desativar o setor "${setor.nome}"?`
-    );
+    const confirmar =
+        confirm(
+            `Deseja desativar o setor "${setor.nome}"?`
+        );
 
 
     if (!confirmar) {
@@ -737,11 +930,13 @@ function excluirSetor(id) {
 
         if (!response.ok) {
 
-            return response.text().then(function (mensagem) {
+            return response
+                .text()
+                .then(function (mensagem) {
 
-                throw new Error(mensagem);
+                    throw new Error(mensagem);
 
-            });
+                });
         }
 
 
@@ -750,9 +945,14 @@ function excluirSetor(id) {
 
     .then(function (data) {
 
-        console.log("Setor desativado:", data);
+        console.log(
+            "Setor desativado:",
+            data
+        );
 
-        alert("Setor desativado com sucesso!");
+        alert(
+            "Setor desativado com sucesso!"
+        );
 
         listarSetores();
     })
@@ -775,16 +975,19 @@ function excluirSetor(id) {
 
 function ativarSetor(id) {
 
-    const setor = setores.find(function (s) {
+    const setor =
+        setores.find(function (s) {
 
-        return s.id === id;
+            return s.id === id;
 
-    });
+        });
 
 
     if (setor == null) {
 
-        alert("Setor não encontrado.");
+        alert(
+            "Setor não encontrado."
+        );
 
         return;
     }
@@ -815,11 +1018,13 @@ function ativarSetor(id) {
 
         if (!response.ok) {
 
-            return response.text().then(function (mensagem) {
+            return response
+                .text()
+                .then(function (mensagem) {
 
-                throw new Error(mensagem);
+                    throw new Error(mensagem);
 
-            });
+                });
         }
 
 
@@ -828,9 +1033,14 @@ function ativarSetor(id) {
 
     .then(function (data) {
 
-        console.log("Setor ativado:", data);
+        console.log(
+            "Setor ativado:",
+            data
+        );
 
-        alert("Setor ativado com sucesso!");
+        alert(
+            "Setor ativado com sucesso!"
+        );
 
         listarSetores();
     })
@@ -852,7 +1062,9 @@ function ativarSetor(id) {
 // =====================================================
 
 const formSetor =
-    document.getElementById("formSetor");
+    document.getElementById(
+        "formSetor"
+    );
 
 
 if (formSetor != null) {
@@ -882,7 +1094,9 @@ if (formSetor != null) {
 // =====================================================
 
 const modal =
-    document.getElementById("modal");
+    document.getElementById(
+        "modal"
+    );
 
 
 if (modal != null) {
@@ -906,7 +1120,8 @@ if (modal != null) {
 
 function sair() {
 
-    window.location.href = "telaLog.html";
+    window.location.href =
+        "telaLog.html";
 }
 
 

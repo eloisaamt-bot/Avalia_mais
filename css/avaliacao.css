@@ -518,7 +518,7 @@ body {
 
     transition: 0.2s;
 
-    border: 1px solid transparent;
+  border-top: 4px solid #4d7cff;
 }
 
 

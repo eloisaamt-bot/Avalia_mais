@@ -1,17 +1,9 @@
-// ==========================================
-// CONFIGURAÇÃO
-// ==========================================
-
 const API = "https://localhost:7254/avaliacao/avaliacoes";
 
 let avaliacoes = [];
 
 let ordemAtual = "data";
 
-
-// ==========================================
-// INICIAR
-// ==========================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -25,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .getElementById("filtroNota")
         .addEventListener("change", aplicarFiltros);
 
-
     document
         .getElementById("ordenarData")
         .addEventListener("click", function () {
@@ -37,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
             aplicarFiltros();
         });
 
-
     document
         .getElementById("ordenarNota")
         .addEventListener("click", function () {
@@ -48,13 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             aplicarFiltros();
         });
-
 });
 
 
-// ==========================================
-// BUSCAR AVALIAÇÕES
-// ==========================================
+// ======================================================
+// CARREGAR AVALIAÇÕES
+// ======================================================
 
 async function carregarAvaliacoes() {
 
@@ -63,19 +52,14 @@ async function carregarAvaliacoes() {
         const resposta = await fetch(API);
 
         if (!resposta.ok) {
-
-            throw new Error(
-                "Erro ao buscar avaliações."
-            );
+            throw new Error("Erro ao buscar avaliações.");
         }
 
         avaliacoes = await resposta.json();
 
         carregarFiltroSetores();
 
-        atualizarContador(
-            avaliacoes.length
-        );
+        atualizarContador(avaliacoes.length);
 
         aplicarFiltros();
 
@@ -83,72 +67,52 @@ async function carregarAvaliacoes() {
 
         console.error(erro);
 
-        document.getElementById(
-            "listaAvaliacoes"
-        ).innerHTML = `
-
+        document.getElementById("listaAvaliacoes").innerHTML = `
             <div class="sem-avaliacoes">
-
                 <i class="fa-solid fa-triangle-exclamation"></i>
-
-                <p>
-                    Não foi possível carregar as avaliações.
-                </p>
-
+                <p>Não foi possível carregar as avaliações.</p>
             </div>
-
         `;
     }
 }
 
 
-// ==========================================
+// ======================================================
 // FILTRO DE SETORES
-// ==========================================
+// ======================================================
 
 function carregarFiltroSetores() {
 
-    const select =
-        document.getElementById("filtroSetor");
-
+    const select = document.getElementById("filtroSetor");
 
     const setores = [];
-
 
     avaliacoes.forEach(function (avaliacao) {
 
         if (!setores.includes(avaliacao.setor)) {
 
-            setores.push(
-                avaliacao.setor
-            );
+            setores.push(avaliacao.setor);
         }
-
     });
-
 
     setores.sort();
 
-
     setores.forEach(function (setor) {
 
-        const option =
-            document.createElement("option");
+        const option = document.createElement("option");
 
         option.value = setor;
 
         option.textContent = setor;
 
         select.appendChild(option);
-
     });
-
 }
 
 
-// ==========================================
+// ======================================================
 // APLICAR FILTROS
-// ==========================================
+// ======================================================
 
 function aplicarFiltros() {
 
@@ -161,20 +125,18 @@ function aplicarFiltros() {
     let resultado = [...avaliacoes];
 
 
-    // FILTRO SETOR
+    // Filtro por setor
 
     if (setorSelecionado !== "todos") {
 
         resultado = resultado.filter(function (avaliacao) {
 
             return avaliacao.setor === setorSelecionado;
-
         });
-
     }
 
 
-    // FILTRO NOTA
+    // Filtro por nota
 
     if (notaSelecionada !== "todas") {
 
@@ -183,34 +145,29 @@ function aplicarFiltros() {
         resultado = resultado.filter(function (avaliacao) {
 
             return avaliacao.nota === nota;
-
         });
-
     }
 
 
-    // ORDENAÇÃO
+    // Ordenação por data
 
     if (ordemAtual === "data") {
 
         resultado.sort(function (a, b) {
 
-            return new Date(b.dataHora) -
-                   new Date(a.dataHora);
-
+            return new Date(b.dataHora) - new Date(a.dataHora);
         });
-
     }
 
+
+    // Ordenação por nota
 
     if (ordemAtual === "nota") {
 
         resultado.sort(function (a, b) {
 
             return b.nota - a.nota;
-
         });
-
     }
 
 
@@ -220,17 +177,14 @@ function aplicarFiltros() {
 }
 
 
-// ==========================================
+// ======================================================
 // MOSTRAR AVALIAÇÕES
-// ==========================================
+// ======================================================
 
 function mostrarAvaliacoes(lista) {
 
     const container =
-        document.getElementById(
-            "listaAvaliacoes"
-        );
-
+        document.getElementById("listaAvaliacoes");
 
     container.innerHTML = "";
 
@@ -238,17 +192,10 @@ function mostrarAvaliacoes(lista) {
     if (lista.length === 0) {
 
         container.innerHTML = `
-
             <div class="sem-avaliacoes">
-
                 <i class="fa-regular fa-face-frown"></i>
-
-                <p>
-                    Nenhuma avaliação encontrada.
-                </p>
-
+                <p>Nenhuma avaliação encontrada.</p>
             </div>
-
         `;
 
         return;
@@ -257,107 +204,227 @@ function mostrarAvaliacoes(lista) {
 
     lista.forEach(function (avaliacao) {
 
-        const card =
-            document.createElement("div");
+        const card = document.createElement("div");
+
+        card.classList.add("card-avaliacao");
 
 
-        card.classList.add(
-            "card-avaliacao"
-        );
+        // Obtém ícone e cor do setor
+
+        const icone =
+            obterIconeSetor(
+                avaliacao.setor
+            );
+
+        const cor =
+            obterCorAvaliacao(
+                avaliacao.nota
+            );
 
 
-     const classificacao =
-    obterClassificacao(
-        avaliacao.nota
-    );
+        // Aplica a cor na borda superior do card
 
-const estrelas =
-    criarEstrelas(
-        avaliacao.nota
-    );
+        card.style.borderTopColor = cor;
+
+
+        const classificacao =
+            obterClassificacao(avaliacao.nota);
+
+        const estrelas =
+            criarEstrelas(avaliacao.nota);
 
         const data =
-            formatarData(
-                avaliacao.dataHora
-            );
+            formatarData(avaliacao.dataHora);
 
 
         const comentario =
             avaliacao.comentario &&
-            avaliacao.comentario.trim() !== ""
+                avaliacao.comentario.trim() !== ""
+
                 ? `"${avaliacao.comentario}"`
+
                 : "Sem comentário";
 
 
         card.innerHTML = `
 
-            <div class="icone-avaliacao">
-
-                <i class="fa-solid fa-building"></i>
-
+            <div
+                class="icone-avaliacao"
+                style="color: ${cor};"
+            >
+                <i class="fa-solid ${icone}"></i>
             </div>
-
 
             <div class="info-avaliacao">
 
                 <div class="linha-superior">
 
                     <span class="nome-setor">
-
                         ${avaliacao.setor}
-
                     </span>
 
                     <span class="estrelas">
-
                         ${estrelas}
-
                     </span>
 
                 </div>
 
-
                 <p class="comentario">
-
                     ${comentario}
-
                 </p>
 
             </div>
-
 
             <div class="lado-direito">
 
                 <span
                     class="classificacao ${classificacao.classe}"
                 >
-
                     ${classificacao.nome}
-
                 </span>
 
-
                 <span class="data-avaliacao">
-
                     ${data}
-
                 </span>
 
             </div>
-
         `;
 
 
         container.appendChild(card);
-
     });
-
 }
 
 
-// ==========================================
+// ======================================================
+// ÍCONES DOS SETORES
+// ======================================================
+
+function obterIconeSetor(nomeSetor) {
+
+    const nome = nomeSetor.toLowerCase();
+
+
+    if (nome.includes("atendimento")) {
+        return "fa-handshake";
+    }
+
+
+    if (nome.includes("caixa")) {
+        return "fa-cash-register";
+    }
+
+
+    if (nome.includes("ambiente")) {
+        return "fa-store";
+    }
+
+
+    if (nome.includes("limpeza")) {
+        return "fa-broom";
+    }
+
+
+    if (nome.includes("produto")) {
+        return "fa-box";
+    }
+
+
+    if (
+        nome.includes("entrega") ||
+        nome.includes("delivery")
+    ) {
+        return "fa-truck";
+    }
+
+
+    if (nome.includes("estoque")) {
+        return "fa-warehouse";
+    }
+
+
+    if (nome.includes("vendas") || nome.includes("venda")) {
+        return "fa-cart-shopping";
+    }
+
+
+    if (nome.includes("financeiro")) {
+        return "fa-money-bill-wave";
+    }
+
+
+    if (
+        nome.includes("recepção") ||
+        nome.includes("recepcao")
+    ) {
+        return "fa-bell-concierge";
+    }
+
+
+    if (nome.includes("cozinha")) {
+        return "fa-utensils";
+    }
+
+
+    if (nome.includes("qualidade")) {
+        return "fa-star";
+    }
+
+
+    if (
+        nome.includes("produção") ||
+        nome.includes("producao")
+    ) {
+        return "fa-gears";
+    }
+
+
+    if (
+        nome.includes("logística") ||
+        nome.includes("logistica")
+    ) {
+        return "fa-truck-fast";
+    }
+
+
+    if (
+        nome.includes("rh") ||
+        nome.includes("recursos humanos")
+    ) {
+        return "fa-users";
+    }
+
+
+    // Ícone padrão
+
+    return "fa-star";
+}
+
+
+// ======================================================
+// CORES DOS SETORES
+// ======================================================
+
+function obterCorAvaliacao(nota) {
+
+    if (nota === 5) {
+        return "#43b982";
+    }
+
+    if (nota === 4) {
+        return "#4d7cff";
+    }
+
+    if (nota === 3) {
+        return "#f2a900";
+    }
+
+    return "#d9534f";
+}
+
+// ======================================================
 // ESTRELAS
-// ==========================================
+// ======================================================
 
 function criarEstrelas(nota) {
 
@@ -377,9 +444,7 @@ function criarEstrelas(nota) {
             resultado += `
                 <i class="fa-regular fa-star estrela-vazia"></i>
             `;
-
         }
-
     }
 
 
@@ -387,9 +452,9 @@ function criarEstrelas(nota) {
 }
 
 
-// ==========================================
+// ======================================================
 // CLASSIFICAÇÃO
-// ==========================================
+// ======================================================
 
 function obterClassificacao(nota) {
 
@@ -399,7 +464,6 @@ function obterClassificacao(nota) {
             nome: "Excelente",
             classe: "excelente"
         };
-
     }
 
 
@@ -409,7 +473,6 @@ function obterClassificacao(nota) {
             nome: "Bom",
             classe: "bom"
         };
-
     }
 
 
@@ -419,87 +482,73 @@ function obterClassificacao(nota) {
             nome: "Regular",
             classe: "regular"
         };
-
     }
 
 
     return {
-
         nome: "Ruim",
-
         classe: "ruim"
-
     };
-
 }
 
 
-// ==========================================
-// DATA
-// ==========================================
+// ======================================================
+// FORMATAR DATA
+// ======================================================
 
 function formatarData(data) {
 
     if (!data) {
-
         return "";
-
     }
 
 
-    const dataObj =
-        new Date(data);
+    const dataObj = new Date(data);
 
 
-    return dataObj.toLocaleDateString(
-        "pt-BR"
-    );
-
+    return dataObj.toLocaleDateString("pt-BR");
 }
 
 
-// ==========================================
+// ======================================================
 // CONTADOR
-// ==========================================
+// ======================================================
 
 function atualizarContador(quantidade) {
 
-    const contador = document.getElementById(
-        "quantidadeAvaliacoes"
-    );
+    const contador =
+        document.getElementById("quantidadeAvaliacoes");
+
 
     if (!contador) {
+
         console.warn(
             "Elemento #quantidadeAvaliacoes não encontrado no HTML."
         );
+
         return;
     }
 
+
     contador.textContent =
-        `${quantidade} ${
-            quantidade === 1
-                ? "avaliação encontrada"
-                : "avaliações encontradas"
+        `${quantidade} ${quantidade === 1
+            ? "avaliação encontrada"
+            : "avaliações encontradas"
         }`;
 }
 
 
-// ==========================================
+// ======================================================
 // BOTÕES DE ORDENAÇÃO
-// ==========================================
+// ======================================================
 
 function atualizarBotoesOrdem() {
 
     const botaoData =
-        document.getElementById(
-            "ordenarData"
-        );
-
+        document.getElementById("ordenarData");
 
     const botaoNota =
-        document.getElementById(
-            "ordenarNota"
-        );
+        document.getElementById("ordenarNota");
 
 
     botaoData.classList.remove("ativo");
@@ -514,19 +563,15 @@ function atualizarBotoesOrdem() {
     } else {
 
         botaoNota.classList.add("ativo");
-
     }
-
 }
 
 
-// ==========================================
+// ======================================================
 // SAIR
-// ==========================================
+// ======================================================
 
 function sair() {
 
-    window.location.href =
-        "telaLog.html";
-
+    window.location.href = "telaLog.html";
 }

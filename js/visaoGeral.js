@@ -1,3 +1,7 @@
+// ==========================================
+// CONFIGURAÇÃO
+// ==========================================
+
 const API_URL = "https://localhost:7254/Avaliacao";
 
 
@@ -26,9 +30,6 @@ const listaAvaliacoes =
 const periodo =
     document.getElementById("periodo");
 
-const btnSair =
-    document.getElementById("btnSair");
-
 
 // ==========================================
 // CARREGAR RESUMO
@@ -36,31 +37,47 @@ const btnSair =
 
 function carregarResumo() {
 
-    fetch(`${API_URL}/resumo`)
+    let url = `${API_URL}/resumo`;
+
+    // Se não for "todos", envia a quantidade de dias
+    if (periodo.value !== "todos") {
+
+        url += `?dias=${periodo.value}`;
+
+    }
+
+    fetch(url)
+
         .then(response => {
 
             if (!response.ok) {
+
                 throw new Error(
                     "Não foi possível carregar o resumo."
                 );
+
             }
 
             return response.json();
+
         })
+
         .then(data => {
 
             totalAvaliacoes.textContent =
                 data.totalAvaliacoes;
 
             mediaGeral.textContent =
-                data.mediaGeral.toFixed(1);
+                Number(data.mediaGeral).toFixed(1);
 
             setoresAvaliados.textContent =
                 data.setoresAvaliados;
 
             totalComentarios.textContent =
                 data.totalComentarios;
+
         })
+
         .catch(error => {
 
             console.error(error);
@@ -69,6 +86,7 @@ function carregarResumo() {
             mediaGeral.textContent = "--";
             setoresAvaliados.textContent = "--";
             totalComentarios.textContent = "--";
+
         });
 }
 
@@ -79,17 +97,32 @@ function carregarResumo() {
 
 function carregarDesempenho() {
 
-    fetch(`${API_URL}/desempenho-setores`)
+    let url =
+        `${API_URL}/desempenho-setores`;
+
+    // Se houver período selecionado
+    if (periodo.value !== "todos") {
+
+        url += `?dias=${periodo.value}`;
+
+    }
+
+    fetch(url)
+
         .then(response => {
 
             if (!response.ok) {
+
                 throw new Error(
                     "Não foi possível carregar os setores."
                 );
+
             }
 
             return response.json();
+
         })
+
         .then(data => {
 
             listaDesempenho.innerHTML = "";
@@ -97,9 +130,11 @@ function carregarDesempenho() {
             if (data.length === 0) {
 
                 listaDesempenho.innerHTML = `
+                    
                     <p class="mensagem-vazia">
                         Nenhum setor cadastrado.
                     </p>
+
                 `;
 
                 return;
@@ -114,6 +149,7 @@ function carregarDesempenho() {
 
                 const item =
                     document.createElement("div");
+
 
                 item.className =
                     "item-desempenho";
@@ -137,10 +173,11 @@ function carregarDesempenho() {
                         </div>
 
                         <strong class="media-setor">
-                            ${setor.media.toFixed(1)}
+                            ${Number(setor.media).toFixed(1)}
                         </strong>
 
                     </div>
+
 
                     <div class="barra">
 
@@ -155,17 +192,23 @@ function carregarDesempenho() {
 
 
                 listaDesempenho.appendChild(item);
+
             });
+
         })
+
         .catch(error => {
 
             console.error(error);
 
             listaDesempenho.innerHTML = `
+
                 <p class="mensagem-erro">
                     Não foi possível carregar o desempenho.
                 </p>
+
             `;
+
         });
 }
 
@@ -176,17 +219,34 @@ function carregarDesempenho() {
 
 function carregarAvaliacoesRecentes() {
 
-    fetch(`${API_URL}/recentes`)
+    let url =
+        `${API_URL}/recentes`;
+
+
+    // Se houver período selecionado
+    if (periodo.value !== "todos") {
+
+        url += `?dias=${periodo.value}`;
+
+    }
+
+
+    fetch(url)
+
         .then(response => {
 
             if (!response.ok) {
+
                 throw new Error(
                     "Não foi possível carregar as avaliações."
                 );
+
             }
 
             return response.json();
+
         })
+
         .then(data => {
 
             listaAvaliacoes.innerHTML = "";
@@ -195,9 +255,11 @@ function carregarAvaliacoesRecentes() {
             if (data.length === 0) {
 
                 listaAvaliacoes.innerHTML = `
+
                     <p class="mensagem-vazia">
-                        Nenhuma avaliação registrada.
+                        Nenhuma avaliação registrada neste período.
                     </p>
+
                 `;
 
                 return;
@@ -209,12 +271,15 @@ function carregarAvaliacoesRecentes() {
                 const item =
                     document.createElement("div");
 
+
                 item.className =
                     "item-avaliacao";
 
 
                 const dataFormatada =
-                    formatarData(avaliacao.data_Hora);
+                    formatarData(
+                        avaliacao.data_Hora
+                    );
 
 
                 item.innerHTML = `
@@ -259,17 +324,23 @@ function carregarAvaliacoesRecentes() {
 
 
                 listaAvaliacoes.appendChild(item);
+
             });
+
         })
+
         .catch(error => {
 
             console.error(error);
 
             listaAvaliacoes.innerHTML = `
+
                 <p class="mensagem-erro">
                     Não foi possível carregar as avaliações.
                 </p>
+
             `;
+
         });
 }
 
@@ -281,7 +352,9 @@ function carregarAvaliacoesRecentes() {
 function formatarData(data) {
 
     if (!data) {
+
         return "";
+
     }
 
 
@@ -310,30 +383,25 @@ periodo.addEventListener(
     "change",
     function () {
 
-        console.log(
-            "Período selecionado:",
-            periodo.value
-        );
-
-        /*
-         * O filtro será conectado ao backend
-         * na próxima etapa.
-         */
-
         carregarResumo();
+
         carregarDesempenho();
+
         carregarAvaliacoesRecentes();
+
     }
 );
 
 
-// =====================================================
+// ==========================================
 // SAIR
-// =====================================================
+// ==========================================
 
 function sair() {
 
-    window.location.href = "telaLog.html";
+    window.location.href =
+        "telaLog.html";
+
 }
 
 
@@ -348,7 +416,13 @@ function carregarDashboard() {
     carregarDesempenho();
 
     carregarAvaliacoesRecentes();
+
 }
 
 
+// ==========================================
+// INICIAR
+// ==========================================
+
 carregarDashboard();
+
