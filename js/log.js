@@ -13,7 +13,6 @@ if (formLogin != null) {
             alert("Preencha todos os campos.");
             return;
         }
-
         fetch("https://localhost:7254/usuario/login", {
 
             method: "POST",
@@ -28,9 +27,7 @@ if (formLogin != null) {
                 email: email,
                 senha: senha
             })
-
         })
-
         .then(response => {
 
             if (!response.ok) {
@@ -38,9 +35,7 @@ if (formLogin != null) {
             }
 
             return response.json();
-
         })
-
         .then(data => {
 
             console.log("Usuário recebido:", data);
@@ -48,9 +43,8 @@ if (formLogin != null) {
             alert("Logado com sucesso!");
 
             window.location.href = "visaoGeral.html";
-
         })
-
+        
         .catch(error => {
 
             console.log(error);

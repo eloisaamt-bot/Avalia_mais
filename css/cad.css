@@ -290,23 +290,7 @@ body {
     margin-bottom: 25px;
 }
 
-.icone-titulo {
-    width: 48px;
-    height: 48px;
 
-    border-radius: 14px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: #edf2ff;
-
-    color: #6485f6;
-
-    font-size: 19px;
-}
 
 .cadastro-container h2 {
     color: #17357c;

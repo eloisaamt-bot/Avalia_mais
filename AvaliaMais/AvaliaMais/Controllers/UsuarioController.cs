@@ -45,6 +45,13 @@ namespace AvaliaMais.Controllers
                 "IdLogado",
                 usuarioBanco[0].Id.ToString()
             );
+            Response.Cookies.Append("IdLogado", usuarioBanco[0].Id.ToString(),
+                new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None
+                });
 
             return Ok(usuarioBanco[0]);
         }
