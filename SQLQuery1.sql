@@ -32,6 +32,30 @@ CREATE TABLE avaliacoes_setor (
     fk_setores_id INTEGER,
     fk_avaliacoes_id INTEGER
 );
+
+CREATE TABLE motivos_avaliacao (
+    id INTEGER IDENTITY PRIMARY KEY,
+    descricao VARCHAR(150) NOT NULL,
+    nota_referencia INTEGER NOT NULL,
+    fk_setores_id INTEGER NOT NULL,
+
+    FOREIGN KEY (fk_setores_id)
+        REFERENCES setores(id),
+
+    CHECK (nota_referencia BETWEEN 1 AND 5)
+);
+
+CREATE TABLE avaliacao_motivos (
+    id INTEGER IDENTITY PRIMARY KEY,
+    fk_avaliacoes_setor_id INTEGER NOT NULL,
+    fk_motivos_avaliacao_id INTEGER NOT NULL,
+
+    FOREIGN KEY (fk_avaliacoes_setor_id)
+        REFERENCES avaliacoes_setor(id),
+
+    FOREIGN KEY (fk_motivos_avaliacao_id)
+        REFERENCES motivos_avaliacao(id)
+);
  
 ALTER TABLE setores ADD CONSTRAINT FK_setores_2
     FOREIGN KEY (fk_usuarios_id)
@@ -70,6 +94,14 @@ INSERT INTO avaliacoes ( nota, comentario, data_hora) VALUES
 ( 10, 'Excelente experi?ncia.', '2026-09-02 14:20:00'),
 ( 6, 'O atendimento poderia ser mais r?pido.', '2026-09-02 16:45:00'),
 ( 8, 'Gostei dos produtos e do ambiente.', '2026-09-03 10:10:00');
+
+INSERT INTO motivos_avaliacao
+(descricao, nota_referencia, fk_setores_id)
+VALUES
+('Chão estava sujo', 1, 3),
+('Ambiente com mau cheiro', 1, 3),
+('Mesas estavam sujas', 2, 3),
+('Ambiente estava organizado', 5, 3);
 
 
 -- AVALIA??ES POR SETOR

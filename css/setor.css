@@ -919,6 +919,54 @@ body {
     border-color: #17357c;
 }
 
+
+/* MOTIVOS POR NOTA */
+
+.campo-motivos {
+    margin-top: 20px;
+}
+
+.ajuda-motivos {
+    color: #7186a8;
+    font-size: 12px;
+    margin: 6px 0 15px;
+    line-height: 1.5;
+}
+
+.grupo-nota {
+    background: #f7f9fd;
+    border: 1px solid #e0e7f3;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.grupo-nota label {
+    display: block;
+    color: #254a9a;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.grupo-nota textarea {
+    width: 100%;
+    min-height: 65px;
+    padding: 10px;
+    border: 1px solid #d8e1ef;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.grupo-nota textarea:focus {
+    border-color: #6485f6;
+    box-shadow: 0 0 0 3px rgba(100,133,246,.10);
+}
+
+
 /* ========================================
    RESPONSIVIDADE
 ======================================== */

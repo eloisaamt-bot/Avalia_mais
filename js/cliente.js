@@ -5,11 +5,14 @@ let setoresAvaliados = [];
 let setorSelecionado = null;
 let notaSetorSelecionada = null;
 let notaGeralSelecionada = null;
+let motivosSetorSelecionados = [];
+let requisicaoMotivos = 0;
 
 
 // ==========================================
 // ELEMENTOS DA TELA
 // ==========================================
+
 
 const listaSetores = document.getElementById("listaSetores");
 const contadorSetores = document.getElementById("contadorSetores");
@@ -18,6 +21,14 @@ const areaPergunta = document.getElementById("areaPergunta");
 const nomeSetor = document.getElementById("nomeSetor");
 const perguntaSetor = document.getElementById("perguntaSetor");
 const notasSetor = document.getElementById("notasSetor");
+
+const areaMotivos = document.createElement("div");
+
+areaMotivos.id = "areaMotivos";
+areaMotivos.className = "area-motivos";
+areaMotivos.style.marginTop = "20px";
+
+notasSetor.insertAdjacentElement("afterend", areaMotivos);
 
 const btnProximo = document.getElementById("btnProximo");
 const btnFinalizar = document.getElementById("btnFinalizar");
@@ -208,6 +219,11 @@ function selecionarSetor(setor) {
 
     notaSetorSelecionada = null;
 
+    motivosSetorSelecionados = [];
+
+    areaMotivos.innerHTML = "";
+    areaMotivos.style.display = "none";
+
 
     nomeSetor.textContent = setor.nome;
 
@@ -250,17 +266,15 @@ function criarNotasSetor() {
 
             notaSetorSelecionada = nota;
 
-
             document
                 .querySelectorAll("#notasSetor .botao-nota")
                 .forEach(item => {
-
                     item.classList.remove("selecionado");
-
                 });
 
-
             botao.classList.add("selecionado");
+
+            buscarMotivos(setorSelecionado.id, nota);
 
         });
 
@@ -270,6 +284,109 @@ function criarNotasSetor() {
     }
 }
 
+// ==========================================
+// BUSCAR MOTIVOS DA AVALIAÇÃO
+// ==========================================
+
+function buscarMotivos(setorId, nota) {
+
+    const requisicaoAtual = ++requisicaoMotivos;
+
+    motivosSetorSelecionados = [];
+
+    areaMotivos.innerHTML = "<p>Carregando motivos...</p>";
+
+    areaMotivos.style.display = "block";
+
+    fetch(`${API_URL}/motivos?setorId=${setorId}&nota=${nota}`)
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Não foi possível buscar os motivos.");
+            }
+
+            return response.json();
+
+        })
+        .then(motivos => {
+
+            // Evita mostrar resposta de uma nota anterior
+            if (requisicaoAtual !== requisicaoMotivos) {
+                return;
+            }
+
+            areaMotivos.innerHTML = "";
+
+            const titulo = document.createElement("h3");
+
+            titulo.textContent = "Selecione os motivos:";
+
+            areaMotivos.appendChild(titulo);
+
+            if (motivos.length === 0) {
+
+                areaMotivos.innerHTML =
+                    "<p>Não há motivos cadastrados para esta nota.</p>";
+
+                return;
+            }
+
+            motivos.forEach(motivo => {
+
+                const label = document.createElement("label");
+
+                const checkbox = document.createElement("input");
+
+                checkbox.type = "checkbox";
+                checkbox.value = motivo.id;
+
+                checkbox.addEventListener("change", function () {
+
+                    const idMotivo = Number(motivo.id);
+
+                    if (this.checked) {
+
+                        motivosSetorSelecionados.push(idMotivo);
+
+                    } else {
+
+                        motivosSetorSelecionados =
+                            motivosSetorSelecionados.filter(
+                                id => id !== idMotivo
+                            );
+
+                    }
+
+                });
+
+                const texto = document.createElement("span");
+
+                texto.textContent = motivo.descricao;
+
+                label.appendChild(checkbox);
+                label.appendChild(texto);
+
+                label.style.display = "block";
+                label.style.marginBottom = "10px";
+
+                areaMotivos.appendChild(label);
+
+            });
+
+        })
+        .catch(error => {
+
+            if (requisicaoAtual !== requisicaoMotivos) {
+                return;
+            }
+
+            console.error(error);
+
+            areaMotivos.innerHTML =
+                "<p>Erro ao carregar os motivos. Tente novamente.</p>";
+
+        });
+}
 
 // ==========================================
 // SALVAR AVALIAÇÃO DO SETOR
@@ -297,7 +414,9 @@ function salvarAvaliacaoSetor() {
 
         idSetor: setorSelecionado.id,
 
-        nota: notaSetorSelecionada
+        nota: notaSetorSelecionada,
+
+        motivos: [...motivosSetorSelecionados]
 
     });
 

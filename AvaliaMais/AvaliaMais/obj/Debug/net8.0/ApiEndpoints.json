@@ -43,6 +43,27 @@
   },
   {
     "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
+    "Method": "ObterMotivos",
+    "RelativePath": "Avaliacao/motivos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nota",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvaliaMais.Controllers.AvaliacaoController",
     "Method": "AvaliacoesRecentes",
     "RelativePath": "Avaliacao/recentes",
     "HttpMethod": "GET",

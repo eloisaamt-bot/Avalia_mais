@@ -110,6 +110,36 @@
         }
       }
     },
+    "/Avaliacao/motivos": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "parameters": [
+          {
+            "name": "setorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nota",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Setor": {
       "get": {
         "tags": [

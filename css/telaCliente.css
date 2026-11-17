@@ -1363,6 +1363,67 @@ textarea::placeholder {
 
 
 /* ========================================
+   MOTIVOS DA AVALIAÇÃO
+======================================== */
+
+.area-motivos {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    animation: aparecer 0.3s ease;
+}
+
+.area-motivos h3 {
+    color: #17336f;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.area-motivos label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    margin-bottom: 9px !important;
+    background: #f7f9fd;
+    border: 1px solid #e0e7f3;
+    border-radius: 11px;
+    color: #37558f;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.area-motivos label:hover {
+    background: #eef3ff;
+    border-color: #6485f6;
+    transform: translateX(3px);
+}
+
+.area-motivos input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #4266d3;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.area-motivos input[type="checkbox"]:checked + span {
+    color: #254a9a;
+    font-weight: 700;
+}
+
+.area-motivos p {
+    color: #8192b1;
+    font-size: 13px;
+    padding: 12px;
+    background: #f7f9fd;
+    border-radius: 10px;
+}
+
+
+
+/* ========================================
    ANIMAÇÃO
 ======================================== */
 
